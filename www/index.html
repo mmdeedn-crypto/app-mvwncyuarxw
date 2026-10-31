@@ -1,0 +1,2705 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f3f7f4">
+    <script>
+      try{
+        var _t=localStorage.getItem("mb2t");
+        if(_t!=="dark"&&_t!=="light")_t="light";
+        document.documentElement.setAttribute("data-theme",_t);
+        document.querySelector('meta[name=theme-color]').setAttribute("content",_t=="dark"?"#06130d":"#f3f7f4")
+      } catch(e) {
+        document.documentElement.setAttribute("data-theme","light")
+      }
+    </script>
+    <script>
+      /* التصميم يُحقن من هنا حتى لا يظهر كنص إذا ضاع وسم style */
+      (function(){
+        var s=document.createElement('style');s.textContent="      :root {\n        --bg:#06130d;\n        --bg2:#091a12;\n        --card:#0d2018;\n        --card2:#10291e;\n        --tx:#e9f6ee;\n        --mu:#8fb09f;\n        --pr:#22c55e;\n        --prt:#03160a;\n        --bd:#1a3a2a;\n        --dg:var(--dg);\n        --ac:#12301f;\n        --gd:#f5a524;\n        --bl:#3b82f6;\n        --pu:#8b5cf6;\n        --sh:0 6px 24px rgba(0,0,0,.35);\n        color-scheme:dark;\n        --in:#08170f;\n        --in2:#071510;\n        --nvt:#c6e2d2;\n        --hv:rgba(255,255,255,.06);\n        --hb:1.15;\n        --av3:#173a28;\n        --pg:linear-gradient(135deg,#34d86f,#13954a);\n        --pg2:linear-gradient(135deg,#34d86f,#0f7a3b);\n        --topbg:linear-gradient(135deg,#0f4a2d,#0b2b1c);\n        --lcbg:rgba(9,28,20,.78);\n        --g1:rgba(255,255,255,.03);\n        --g2:rgba(255,255,255,.035);\n        --bodyg:radial-gradient(900px 500px at 85% -10%,#0e3a25 0,transparent 60%),var(--bg);\n        --lgbg:radial-gradient(700px 420px at 90% 8%,#0f4a2d 0,transparent 60%),radial-gradient(600px 500px at 0% 85%,#13301f 0,transparent 60%),#04100a;\n        box-sizing:border-box;\n        padding-top:env(safe-area-inset-top,0px);\n        padding-bottom:env(safe-area-inset-bottom,0px)\n      }\n      html {\n        scroll-padding-top:env(safe-area-inset-top,0px);\n        overflow-x:hidden\n      }\n      :root[data-theme=light] {\n        --bg:#f3f7f4;\n        --bg2:#ffffff;\n        --card:#ffffff;\n        --card2:#ffffff;\n        --tx:#10261a;\n        --mu:#5b7566;\n        --pr:#15803d;\n        --prt:#ffffff;\n        --bd:#d3e3d9;\n        --dg:#dc2626;\n        --ac:#e4f4e9;\n        --gd:#b45309;\n        --bl:#2563eb;\n        --pu:#7c3aed;\n        --sh:0 4px 16px rgba(16,38,26,.08);\n        color-scheme:light;\n        --in:#f3f8f5;\n        --in2:#f1f7f3;\n        --nvt:#2f4a3a;\n        --hv:rgba(16,38,26,.06);\n        --hb:.96;\n        --av3:#dcefe3;\n        --pg:linear-gradient(135deg,#22a653,#15803d);\n        --pg2:linear-gradient(135deg,#22a653,#166534);\n        --topbg:linear-gradient(135deg,#dcfce7,#f0fdf4);\n        --lcbg:rgba(255,255,255,.88);\n        --g1:rgba(16,38,26,.04);\n        --g2:rgba(16,38,26,.05);\n        --bodyg:radial-gradient(900px 500px at 85% -10%,#d9f3e2 0,transparent 60%),var(--bg);\n        --lgbg:radial-gradient(700px 420px at 90% 8%,#d2f0dc 0,transparent 60%),radial-gradient(600px 500px at 0% 85%,#e3f3e9 0,transparent 60%),#f3f7f4\n      }\n      :root[data-theme=light] .s0 {\n        color:#b45309\n      }\n      :root[data-theme=light] .s1 {\n        color:#1d4ed8\n      }\n      :root[data-theme=light] .s2 {\n        color:#15803d\n      }\n      * {\n        box-sizing:border-box\n      }\n      body {\n        margin:0;\n        color:var(--tx);\n        font-family:Tajawal,\"Segoe UI\",Tahoma,Arial,sans-serif;\n        line-height:1.6;\n        background:var(--bodyg)\n      }\n      button {\n        font:inherit;\n        cursor:pointer;\n        border:1px solid var(--bd);\n        background:var(--card2);\n        color:var(--tx);\n        border-radius:12px;\n        padding:8px 14px;\n        transition:.15s\n      }\n      button {\n        -webkit-tap-highlight-color:transparent;\n        touch-action:manipulation;\n        min-height:40px\n      }\n      @media(hover:hover) {\n        button:hover {\n          filter:brightness(var(--hb))\n        }\n      }\n      button:active {\n        transform:scale(.97);\n        filter:brightness(.92)\n      }\n      button:focus-visible {\n        outline:2px solid var(--pr);\n        outline-offset:2px\n      }\n      button:disabled {\n        opacity:.5;\n        cursor:not-allowed;\n        transform:none\n      }\n      button[data-a=cp] {\n        min-height:30px;\n        padding:2px 12px\n      }\n      @media(pointer:coarse) {\n        button {\n          min-height:44px\n        }\n        .chip {\n          min-height:38px\n        }\n        button[data-a=cp] {\n          min-height:36px\n        }\n      }\n      button.p {\n        background:var(--pg);\n        color:var(--prt);\n        border:0;\n        font-weight:800\n      }\n      button.d {\n        color:var(--dg);\n        border-color:rgba(220,38,38,.35)\n      }\n      @media(hover:hover) {\n        button.d:hover {\n          background:rgba(220,38,38,.1)\n        }\n      }\n      input,select {\n        font:inherit;\n        width:100%;\n        padding:9px 11px;\n        border:1px solid var(--bd);\n        border-radius:12px;\n        background:var(--in);\n        color:var(--tx)\n      }\n      input:focus,select:focus {\n        outline:2px solid rgba(34,197,94,.45)\n      }\n      label {\n        display:block;\n        font-size:.78rem;\n        color:var(--mu);\n        margin:8px 0 3px\n      }\n      h3 {\n        margin:0 0 12px;\n        font-size:1.02rem\n      }\n      .wrap {\n        max-width:900px;\n        margin:0 auto;\n        padding:14px\n      }\n      .card {\n        background:linear-gradient(180deg,var(--card2),var(--card));\n        border:1px solid var(--bd);\n        border-radius:18px;\n        padding:16px;\n        box-shadow:var(--sh)\n      }\n      .grid {\n        display:grid;\n        grid-template-columns:repeat(auto-fill,minmax(270px,1fr));\n        gap:12px;\n        margin-bottom:14px\n      }\n      .dob {\n        display:grid;\n        grid-template-columns:1fr 1fr 1.5fr;\n        gap:8px\n      }\n      .dob input {\n        text-align:center\n      }\n      .two {\n        display:grid;\n        grid-template-columns:1fr 1fr;\n        gap:8px\n      }\n      .two2 {\n        display:grid;\n        grid-template-columns:repeat(auto-fit,minmax(290px,1fr));\n        gap:12px;\n        margin-bottom:12px\n      }\n      .cols {\n        display:grid;\n        grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);\n        gap:12px;\n        margin-bottom:12px\n      }\n      .cols>*,.two2>*,.grid>* {\n        min-width:0\n      }\n      @media(max-width:900px) {\n        .cols {\n          grid-template-columns:minmax(0,1fr)\n        }\n      }\n      .mu {\n        color:var(--mu);\n        font-size:.85rem\n      }\n      .badge {\n        display:inline-block;\n        border-radius:20px;\n        padding:2px 12px;\n        font-size:.78rem;\n        font-weight:700;\n        background:var(--ac);\n        color:var(--pr)\n      }\n      .s0 {\n        background:rgba(245,165,36,.15);\n        color:#f5a524\n      }\n      .s1 {\n        background:rgba(59,130,246,.18);\n        color:#6aa5ff\n      }\n      .s2 {\n        background:rgba(34,197,94,.17);\n        color:#34d86f\n      }\n      .id {\n        display:inline-block;\n        background:rgba(34,197,94,.15);\n        color:var(--pr);\n        font-weight:800;\n        border-radius:10px;\n        padding:2px 10px;\n        font-size:.85rem\n      }\n      .nm {\n        font-weight:800;\n        border:0;\n        background:none;\n        padding:4px 0;\n        font-size:1.05rem\n      }\n      .tot {\n        background:var(--ac);\n        border-radius:12px;\n        padding:10px;\n        text-align:center;\n        font-weight:800;\n        margin-top:10px;\n        color:var(--pr)\n      }\n      .cred {\n        border:1px dashed var(--pr);\n        border-radius:12px;\n        padding:8px 10px;\n        margin-top:8px;\n        font-size:.88rem;\n        background:var(--ac)\n      }\n      .cred b {\n        direction:ltr;\n        unicode-bidi:embed\n      }\n      .bar {\n        display:flex;\n        gap:8px;\n        margin-bottom:14px;\n        align-items:center;\n        justify-content:space-between\n      }\n      .bar input {\n        flex:1\n      }\n      .it {\n        display:flex;\n        justify-content:space-between;\n        align-items:center;\n        gap:8px;\n        padding:10px 12px;\n        background:var(--in);\n        border-radius:12px;\n        margin-bottom:8px\n      }\n      .big {\n        font-size:1.9rem;\n        font-weight:800;\n        color:var(--gd)\n      }\n      .ch {\n        display:flex;\n        justify-content:space-between;\n        align-items:center;\n        gap:6px;\n        margin-bottom:4px\n      }\n      .chips {\n        display:flex;\n        flex-wrap:wrap;\n        gap:6px\n      }\n      .chip {\n        border-radius:20px;\n        padding:4px 12px;\n        font-size:.82rem;\n        background:var(--ac);\n        color:var(--pr);\n        border-color:transparent;\n        white-space:normal;\n        text-align:right\n      }\n      .chip.on {\n        background:var(--pr);\n        color:var(--prt);\n        font-weight:800\n      }\n      .sec {\n        font-size:.75rem;\n        color:var(--mu);\n        margin:12px 0 4px;\n        font-weight:700;\n        border-top:1px dashed var(--bd);\n        padding-top:8px\n      }\n      .new {\n        border:2px solid var(--pr);\n        margin-bottom:14px\n      }\n      .hl {\n        border-color:var(--pr);\n        animation:pl 1.6s 2\n      }\n      @keyframes pl {\n        50% {\n          box-shadow:0 0 0 7px rgba(34,197,94,.3)\n        }\n      }\n      /* login */\n      .lg {\n        min-height:100vh;\n        display:grid;\n        place-items:center;\n        position:relative;\n        overflow:hidden;\n        padding:20px;\n        background:var(--lgbg)\n      }\n      .lg::before {\n        content:\"\";\n        position:absolute;\n        inset:0;\n        background:repeating-linear-gradient(90deg,transparent 0 110px,var(--g1) 110px 114px),repeating-linear-gradient(0deg,transparent 0 80px,var(--g2) 80px 84px);\n        -webkit-mask-image:linear-gradient(90deg,#000,transparent 55%);\n        mask-image:linear-gradient(90deg,#000,transparent 55%)\n      }\n      .food {\n        position:absolute;\n        bottom:-6px;\n        right:2%;\n        font-size:4.4rem;\n        opacity:.9;\n        filter:drop-shadow(0 8px 18px rgba(0,0,0,.6));\n        letter-spacing:.08em\n      }\n      .lw {\n        position:relative;\n        width:min(450px,100%);\n        text-align:center\n      }\n      .lt h1 {\n        margin:6px 0 0;\n        font-size:2.2rem;\n        font-weight:800\n      }\n      .lt p {\n        margin:2px 0;\n        color:var(--mu)\n      }\n      .ul {\n        display:block;\n        width:70px;\n        height:3px;\n        background:var(--pr);\n        border-radius:3px;\n        margin:12px auto 20px\n      }\n      .lc {\n        background:var(--lcbg);\n        -webkit-backdrop-filter:blur(8px);\n        backdrop-filter:blur(8px);\n        border:1px solid rgba(34,197,94,.35);\n        border-radius:26px;\n        padding:28px;\n        text-align:right\n      }\n      .lc h2 {\n        margin:0;\n        text-align:center;\n        font-size:1.6rem\n      }\n      .lc>p {\n        text-align:center;\n        margin:4px 0 18px\n      }\n      .inp {\n        display:flex;\n        align-items:center;\n        gap:8px;\n        background:var(--in2);\n        border:1px solid var(--bd);\n        border-radius:16px;\n        padding:0 14px;\n        margin-bottom:12px\n      }\n      .inp input {\n        border:0;\n        background:none;\n        outline:0;\n        padding:14px 0;\n        text-align:right\n      }\n      .inp button {\n        border:0;\n        background:none;\n        padding:4px\n      }\n      .lb {\n        width:100%;\n        padding:14px;\n        font-size:1.1rem;\n        border-radius:16px;\n        margin-top:4px\n      }\n      .er {\n        color:var(--dg);\n        min-height:22px;\n        font-size:.88rem;\n        text-align:center\n      }\n      .lf {\n        display:flex;\n        align-items:center;\n        gap:10px;\n        justify-content:center;\n        margin-top:22px\n      }\n      .lf i {\n        width:50px;\n        height:1px;\n        background:var(--pr)\n      }\n      .shake {\n        animation:sk .4s\n      }\n      @keyframes sk {\n        25% {\n          transform:translateX(-8px)\n        }\n        75% {\n          transform:translateX(8px)\n        }\n      }\n      @media(max-width:700px) {\n        .food {\n          font-size:2.4rem;\n          opacity:.5\n        }\n      }\n      /* admin shell */\n      .app {\n        display:grid;\n        grid-template-columns:240px minmax(0,1fr);\n        min-height:100vh\n      }\n      .app>.side {\n        grid-column:1;\n        grid-row:1\n      }\n      .app>.main {\n        grid-column:2;\n        grid-row:1\n      }\n      .side {\n        position:sticky;\n        top:0;\n        height:100vh;\n        background:var(--bg2);\n        border-left:1px solid var(--bd);\n        padding:16px 12px;\n        display:flex;\n        flex-direction:column;\n        gap:6px\n      }\n      .brand {\n        display:flex;\n        gap:10px;\n        align-items:center;\n        padding:4px 6px 16px;\n        border-bottom:1px solid var(--bd);\n        margin-bottom:8px\n      }\n      .brand b {\n        display:block;\n        font-size:1.1rem\n      }\n      .brand small {\n        color:var(--mu);\n        font-size:.7rem\n      }\n      .side nav {\n        display:flex;\n        flex-direction:column;\n        gap:4px;\n        flex:1;\n        min-width:0\n      }\n      .nv {\n        display:flex;\n        align-items:center;\n        gap:10px;\n        width:100%;\n        border:0;\n        background:none;\n        color:var(--nvt);\n        padding:11px 12px;\n        border-radius:12px;\n        text-align:right;\n        font-weight:500\n      }\n      .nv:hover {\n        background:var(--hv)\n      }\n      .nv.on {\n        background:var(--pg);\n        color:var(--prt);\n        font-weight:800\n      }\n      .nv i {\n        font-style:normal;\n        font-size:1.15rem\n      }\n      .cnt {\n        margin-inline-start:auto;\n        font-style:normal;\n        background:var(--bl);\n        color:#fff;\n        border-radius:20px;\n        font-size:.72rem;\n        padding:0 8px;\n        font-weight:700\n      }\n      .sf {\n        display:flex;\n        align-items:center;\n        gap:8px;\n        justify-content:center;\n        color:var(--mu);\n        font-size:.8rem;\n        padding-top:12px;\n        border-top:1px solid var(--bd)\n      }\n      .main {\n        padding:16px 18px;\n        min-width:0\n      }\n      .main>* {\n        animation:fi .3s\n      }\n      @keyframes fi {\n        from {\n          opacity:0;\n          transform:translateY(8px)\n        }\n      }\n      .tb {\n        display:flex;\n        justify-content:space-between;\n        align-items:center;\n        gap:8px;\n        background:var(--bg2);\n        border:1px solid var(--bd);\n        border-radius:18px;\n        padding:10px 14px;\n        margin-bottom:14px\n      }\n      .adm {\n        display:flex;\n        gap:10px;\n        align-items:center\n      }\n      .adm small {\n        display:block;\n        color:var(--mu);\n        font-size:.72rem;\n        line-height:1.2\n      }\n      .av2 {\n        width:40px;\n        height:40px;\n        border-radius:50%;\n        background:var(--pg2);\n        color:var(--prt);\n        display:grid;\n        place-items:center;\n        font-weight:800\n      }\n      .act {\n        display:flex;\n        gap:8px;\n        align-items:center\n      }\n      .ib {\n        width:44px;\n        height:44px;\n        min-height:0!important;\n        padding:0;\n        border-radius:50%;\n        display:inline-grid;\n        place-items:center;\n        font-size:1.05rem;\n        flex:none\n      }\n      .thf {\n        position:absolute;\n        top:14px;\n        left:14px;\n        z-index:2\n      }\n      .mh {\n        display:flex;\n        justify-content:space-between;\n        align-items:center;\n        margin-bottom:12px\n      }\n      .mh h2 {\n        margin:0;\n        font-size:1.3rem\n      }\n      @media(max-width:800px) {\n        .app {\n          display:block\n        }\n        .side {\n          position:fixed;\n          bottom:0;\n          left:0;\n          right:0;\n          top:auto;\n          height:auto;\n          flex-direction:row;\n          padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));\n          z-index:20;\n          border-radius:18px 18px 0 0;\n          border-top:1px solid var(--bd);\n          border-left:0;\n          width:100%;\n          max-width:100vw;\n          overflow:hidden\n        }\n        .app>.side,.app>.main {\n          grid-column:auto;\n          grid-row:auto\n        }\n        .brand,.sf {\n          display:none\n        }\n        .side nav {\n          flex-direction:row;\n          gap:0;\n          overflow-x:auto\n        }\n        .nv {\n          flex-direction:column;\n          gap:0;\n          padding:6px 8px;\n          font-size:.62rem;\n          text-align:center;\n          min-width:64px;\n          justify-content:center;\n          position:relative\n        }\n        .cnt {\n          position:absolute;\n          top:0;\n          left:10px;\n          margin:0\n        }\n        .main {\n          padding-bottom:100px\n        }\n        .tb .badge {\n          display:none\n        }\n      }\n      /* dashboard */\n      .stats {\n        display:grid;\n        grid-template-columns:repeat(auto-fit,minmax(150px,1fr));\n        gap:12px;\n        margin-bottom:12px\n      }\n      .st {\n        display:flex;\n        gap:12px;\n        align-items:center;\n        background:linear-gradient(180deg,var(--card2),var(--card));\n        border:1px solid var(--bd);\n        border-radius:18px;\n        padding:14px;\n        box-shadow:var(--sh)\n      }\n      .st i {\n        font-style:normal;\n        width:48px;\n        height:48px;\n        border-radius:14px;\n        display:grid;\n        place-items:center;\n        font-size:1.4rem;\n        flex:none\n      }\n      .st:nth-child(1) i {\n        background:#16a34a\n      }\n      .st:nth-child(2) i {\n        background:#2563eb\n      }\n      .st:nth-child(3) i {\n        background:#d97706\n      }\n      .st:nth-child(4) i {\n        background:#7c3aed\n      }\n      .st span {\n        display:block;\n        font-size:.78rem;\n        color:var(--mu)\n      }\n      .st b {\n        display:block;\n        font-size:1.6rem;\n        line-height:1.2\n      }\n      .st small {\n        color:var(--pr);\n        font-size:.72rem\n      }\n      .pg {\n        display:grid;\n        grid-template-columns:repeat(auto-fit,minmax(120px,1fr));\n        gap:10px\n      }\n      .pc {\n        background:var(--in);\n        border:1px solid var(--bd);\n        border-radius:14px;\n        padding:12px;\n        text-align:center\n      }\n      .pc .em {\n        font-size:2.2rem\n      }\n      .pc b {\n        display:block\n      }\n      .pc small {\n        color:var(--mu)\n      }\n      .pc em {\n        display:block;\n        font-style:normal;\n        color:var(--pr);\n        font-weight:700;\n        font-size:.85rem\n      }\n      .dw {\n        display:flex;\n        align-items:center;\n        gap:18px;\n        flex-wrap:wrap;\n        justify-content:center\n      }\n      .dn {\n        width:140px;\n        height:140px;\n        border-radius:50%;\n        position:relative;\n        flex:none\n      }\n      .dn::after {\n        content:\"\";\n        position:absolute;\n        inset:28px;\n        background:var(--card);\n        border-radius:50%\n      }\n      .lg2 div {\n        display:flex;\n        align-items:center;\n        gap:8px;\n        margin:6px 0;\n        font-size:.9rem\n      }\n      .lg2 i {\n        width:10px;\n        height:10px;\n        border-radius:50%;\n        display:inline-block\n      }\n      .lg2 b {\n        margin-inline-start:auto\n      }\n      .or {\n        display:flex;\n        justify-content:space-between;\n        align-items:center;\n        gap:10px;\n        flex-wrap:wrap;\n        padding:12px 4px;\n        border-bottom:1px solid var(--bd)\n      }\n      .or:last-child {\n        border:0\n      }\n      .oi {\n        display:flex;\n        flex-direction:column;\n        line-height:1.4\n      }\n      .om {\n        display:flex;\n        gap:8px;\n        align-items:center;\n        flex-wrap:wrap\n      }\n      .om select {\n        width:auto\n      }\n      .ra {\n        display:flex;\n        align-items:center;\n        gap:10px\n      }\n      .ra .av2 {\n        width:36px;\n        height:36px;\n        font-size:.9rem;\n        background:var(--av3);\n        color:var(--mu)\n      }\n      .ra div {\n        flex:1;\n        line-height:1.3\n      }\n      .ra small {\n        color:var(--mu)\n      }\n      table {\n        width:100%;\n        border-collapse:collapse;\n        font-size:.88rem\n      }\n      th {\n        color:var(--mu);\n        font-weight:500\n      }\n      th,td {\n        padding:8px 6px;\n        text-align:right;\n        border-bottom:1px solid var(--bd);\n        white-space:nowrap\n      }\n      .scroll {\n        overflow-x:auto\n      }\n      .pb {\n        margin-bottom:12px\n      }\n      .pl {\n        display:flex;\n        justify-content:space-between;\n        font-size:.88rem;\n        margin-bottom:3px\n      }\n      .tr {\n        height:8px;\n        background:var(--in);\n        border-radius:8px;\n        overflow:hidden\n      }\n      .fl {\n        height:100%;\n        border-radius:8px;\n        transition:width .6s\n      }\n      .f0 {\n        background:#f5a524\n      }\n      .f1 {\n        background:#3b82f6\n      }\n      .f2 {\n        background:#22c55e\n      }\n      .fr {\n        background:var(--dg)\n      }\n      /* user portal */\n      .top {\n        background:var(--topbg);\n        border:1px solid var(--bd);\n        border-bottom:3px solid var(--pr);\n        border-radius:22px;\n        padding:16px;\n        margin-bottom:14px;\n        display:flex;\n        justify-content:space-between;\n        align-items:center;\n        gap:12px;\n        box-shadow:var(--sh)\n      }\n      .top .act {\n        flex:none\n      }\n      .top .act button:not(.ib) {\n        white-space:nowrap\n      }\n      .tl {\n        min-width:0\n      }\n      .top h1 {\n        margin:0;\n        font-size:1.2rem\n      }\n      .top small {\n        color:var(--mu)\n      }\n      .tl {\n        display:flex;\n        gap:10px;\n        align-items:center\n      }\n      .av {\n        width:64px;\n        height:64px;\n        border-radius:20px;\n        background:var(--pg2);\n        color:var(--prt);\n        display:grid;\n        place-items:center;\n        font-size:1.8rem;\n        font-weight:800;\n        flex:none\n      }\n      .trk {\n        display:flex;\n        justify-content:space-between;\n        margin-top:14px\n      }\n      .stp {\n        flex:1;\n        text-align:center;\n        font-size:.8rem;\n        color:var(--mu)\n      }\n      .stp i {\n        display:grid;\n        place-items:center;\n        width:34px;\n        height:34px;\n        border-radius:50%;\n        background:var(--in);\n        border:2px solid var(--bd);\n        margin:0 auto 4px;\n        font-style:normal\n      }\n      .stp.dn2 {\n        color:var(--tx);\n        font-weight:700\n      }\n      .stp.dn2 i {\n        background:var(--pr);\n        color:var(--prt);\n        border-color:var(--pr)\n      }\n      /* assistant */\n      .chat {\n        height:380px;\n        overflow:auto;\n        display:flex;\n        flex-direction:column;\n        gap:8px;\n        padding:8px;\n        background:var(--in2);\n        border-radius:14px\n      }\n      .m {\n        max-width:88%;\n        padding:9px 12px;\n        border-radius:14px;\n        line-height:1.7\n      }\n      .m.b {\n        background:var(--card2);\n        border:1px solid var(--bd);\n        align-self:flex-start\n      }\n      .m.u {\n        background:var(--pr);\n        color:var(--prt);\n        align-self:flex-end;\n        font-weight:600\n      }\n      a.wa,a.mp {\n        display:inline-block;\n        text-decoration:none;\n        font-weight:800;\n        border-radius:12px;\n        padding:8px 14px;\n        font-size:.9rem\n      }\n      a.wa {\n        background:#25d366;\n        color:#04210f\n      }\n      a.mp {\n        background:var(--bl);\n        color:#fff\n      }\n      tr.cl {\n        cursor:pointer\n      }\n      @media(hover:hover) {\n        tr.cl:hover td {\n          background:var(--hv)\n        }\n      }\n      body.nr .main>* {\n        animation:none\n      }\n      .spin {\n        width:34px;\n        height:34px;\n        border:4px solid var(--bd);\n        border-top-color:var(--pr);\n        border-radius:50%;\n        margin:14px auto;\n        animation:sp 1s linear infinite\n      }\n      @keyframes sp {\n        to {\n          transform:rotate(360deg)\n        }\n      }\n      .toast {\n        position:fixed;\n        top:12px;\n        left:50%;\n        transform:translateX(-50%);\n        background:var(--pr);\n        color:var(--prt);\n        padding:10px 18px;\n        border-radius:14px;\n        font-weight:800;\n        z-index:99;\n        box-shadow:var(--sh)\n      }\n      @media print {\n        .side,.tb,button {\n          display:none!important\n        }\n        .app {\n          display:block\n        }\n        body {\n          background:#fff;\n          color:#000\n        }\n        .card,.st {\n          box-shadow:none;\n          background:#fff;\n          color:#000\n        }\n      }";document.head.appendChild(s);
+        var s=document.createElement('style');s.textContent="      .xhero {\n        background:linear-gradient(135deg,var(--topbg),var(--card));\n        border:1px solid var(--bd);\n        border-radius:18px;\n        padding:18px;\n        margin-bottom:12px\n      }\n      .xhero h3 {\n        margin:0 0 6px\n      }\n      .xgrid {\n        display:grid;\n        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));\n        gap:12px\n      }\n      .qrbox {\n        display:flex;\n        align-items:center;\n        gap:14px;\n        margin-top:12px;\n        padding:12px;\n        border:1px dashed var(--pr);\n        border-radius:14px;\n        background:var(--in)\n      }\n      .qrcode {\n        background:#fff;\n        padding:8px;\n        border-radius:8px;\n        min-width:120px;\n        min-height:120px;\n        display:grid;\n        place-items:center\n      }\n      .qrcode canvas,.qrcode img {\n        max-width:100%;\n        height:auto\n      }\n      .scanner {\n        width:100%;\n        max-height:330px;\n        object-fit:cover;\n        border-radius:14px;\n        background:#020704;\n        margin-top:10px\n      }\n      .offer-price {\n        font-size:1.25rem;\n        font-weight:800;\n        color:var(--pr)\n      }\n      @media(max-width:600px) {\n        .qrbox {\n          align-items:flex-start;\n          flex-direction:column\n        }\n        .xhero {\n          padding:14px\n        }\n      }";document.head.appendChild(s);
+        var s=document.createElement('style');s.textContent=".user-dashboard{max-width:760px;padding:12px}.user-head{align-items:center;flex-wrap:wrap}.user-head .act{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.brand-mark{width:46px;height:46px;border-radius:15px;background:var(--ac);display:grid;place-items:center;font-size:25px}.user-dashboard section{margin-bottom:12px}.user-identity{padding:18px}.identity-main{display:flex;align-items:center;gap:12px;min-width:0}.identity-text{min-width:0;flex:1}.identity-text h2{font-size:1.15rem;margin:0 0 5px;overflow-wrap:anywhere}.status-pill{background:var(--ac);color:var(--pr);padding:6px 10px;border-radius:20px;font-size:.78rem;font-weight:800;white-space:nowrap}.user-identity .trk{gap:5px}.user-identity .stp{font-size:.72rem;line-height:1.35}.user-info h3,.user-share h3,.user-location h3,.user-basket h3{margin-bottom:14px}.info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.info-tile{background:var(--in);border:1px solid var(--bd);border-radius:13px;padding:10px;min-width:0;display:flex;flex-direction:column;gap:3px}.info-tile small,.share-details small,.share-total small{color:var(--mu);font-size:.78rem}.info-tile b{overflow-wrap:anywhere;font-size:.9rem}.user-qr{margin-top:12px;flex-direction:row;align-items:center}.user-qr .qrcode{min-width:108px;min-height:108px}.user-qr p{margin:4px 0}.share-details{display:grid;grid-template-columns:1fr 1fr;gap:8px}.share-details>div{padding:11px;background:var(--in);border-radius:13px;display:flex;flex-direction:column;gap:3px}.share-details b{font-size:1rem}.share-total{margin-top:9px;background:var(--ac);border-radius:16px;padding:14px;text-align:center;display:flex;flex-direction:column;gap:2px;color:var(--pr)}.share-total strong{font-size:2rem;line-height:1.3;color:var(--gd)}.share-total span{font-size:.82rem;font-weight:800}.section-head{display:flex;align-items:center;justify-content:space-between;gap:8px}.section-head h3{margin:0}.user-location .info-tile{margin:12px 0}.user-location p{margin:10px 0}.basket-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px;margin-top:8px;background:var(--in);border-radius:12px}.basket-row span{color:var(--pr);font-weight:800}.empty-basket{display:flex;flex-direction:column;align-items:center;gap:4px;padding:22px 10px;color:var(--mu);background:var(--in);border-radius:14px;margin-top:12px}.empty-basket:first-line{font-size:1.7rem}.empty-basket b{color:var(--tx)}.empty-basket small{font-size:.8rem;text-align:center}@media(max-width:480px){.user-dashboard{padding:10px}.user-head{padding:12px}.user-head .act{width:100%;display:grid;grid-template-columns:auto 1fr 1fr}.user-head .act button{padding:7px 8px;font-size:.82rem}.identity-main{gap:9px}.identity-main .av{width:50px;height:50px;border-radius:15px;font-size:1.4rem}.identity-text h2{font-size:1rem}.status-pill{font-size:.68rem;padding:5px 7px}.info-grid{gap:7px}.info-tile{padding:9px}.info-tile b{font-size:.82rem}.user-qr{flex-direction:row;gap:10px;padding:10px}.user-qr .qrcode{min-width:96px;min-height:96px}.user-qr .qrcode canvas,.user-qr .qrcode img{max-width:96px}.user-identity .stp{font-size:.66rem}.user-identity .stp i{width:30px;height:30px}}";document.head.appendChild(s);
+      })();
+    </script>
+    <title>وكيل الغذاء</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+  </head>
+  <body>
+    <div id="app">
+    </div>
+    <script>
+      var K="mb2",MON=["كانون الثاني","شباط","آذار","نيسان","أيار","حزيران","تموز","آب","أيلول","تشرين الأول","تشرين الثاني","كانون الأول"],ST=["قيد التجهيز","جاهزة للاستلام","تم الاستلام"];
+      var D0={
+        items:[],price:2000,month:MON[new Date().getMonth()]+" "+new Date().getFullYear(),admin:{
+          u:"admin",p:"1234"
+        },seq:1000,dseq:0,deleg:[],users:[],reqs:[]
+      };
+      var dq="",pq="",S=ld(),vid=null,me=null,tab="d",q="",nw=null,hl=null,err="",lastU="",flt=-1;
+      try{
+        var ss=localStorage.getItem("mb2s")||sessionStorage.getItem("mb2s");
+        if(ss)me=JSON.parse(ss)
+      } catch(e){}
+      function ld() {
+        try{
+          var v=localStorage.getItem(K);
+          if(v)return fix(JSON.parse(v))
+        } catch(e){}return fix(JSON.parse(JSON.stringify(D0)))
+      }
+      function sv() {
+        try{
+          localStorage.setItem(K,JSON.stringify(S))
+        } catch(e){}if(FBr&&window.FB) {
+          clearTimeout(pt);
+          pt=setTimeout(flush,300)
+        }
+        setTimeout(updBadge,0)
+      }
+      function ses() {
+        try{
+          sessionStorage.removeItem("mb2s");
+          me?localStorage.setItem("mb2s",JSON.stringify(me)):localStorage.removeItem("mb2s")
+        } catch(e){}
+      }
+      function num(n) {
+        return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,"،")
+      }
+      function money(n) {
+        return num(n)+" دينار عراقي"
+      }
+      function esc(s) {
+        return String(s==null?"":s).replace(/[&<>"']/g,function(c) {
+          return{
+            "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+          }
+          [c]
+        })
+      }
+      function nm(s) {
+        return String(s).replace(/[\u200B-\u200F\u202A-\u202E\u2066-\u2069\uFEFF]/g,"").replace(/\u00A0/g," ").replace(/ک/g,"ك").replace(/[یى]/g,"ي").replace(/ؤ/g,"و").replace(/ئ/g,"ي").replace(/[\u064B-\u065F\u0640]/g,"").replace(/[إأآ]/g,"ا").replace(/ى/g,"ي").replace(/ة/g,"ه").toLowerCase().trim()
+      }
+      function pw() {
+        var c;
+        do{
+          c=String(Math.floor(100000+Math.random()*900000))
+        } while(S&&S.users&&S.users.some(function(x) {
+          return String(x.p)===c
+        }));
+        return c
+      }
+      function waNum(p) {
+        var d=dig(String(p||"")).replace(/\D/g,"");
+        if(!d)return"";
+        if(d.indexOf("00")==0)d=d.slice(2);
+        else if(d.charAt(0)=="0")d="964"+d.slice(1);
+        else if(d.indexOf("964")!=0&&d.length<=10)d="964"+d;
+        return d
+      }
+      function waLink(u,p) {
+        var n=waNum(p);
+        return n?"https://wa.me/"+n+"?text="+encodeURIComponent("السلام عليكم "+u.name):""
+      }
+      function mapUrl(l) {
+        return "https://www.google.com/maps?q="+l.lat+","+l.lng
+      }
+      function waBtn(u,p,t) {
+        var w=waLink(u,p);
+        return w?'<a class="wa" href="'+w+'" target="_blank" rel="noopener">💬 '+(t||"واتساب")+'</a>':''
+      }
+      function mpBtn(u) {
+        return u.loc?'<a class="mp" href="'+mapUrl(u.loc)+'" target="_blank" rel="noopener">📍 فتح الموقع</a>':''
+      }
+      function byId(i) {
+        return S.users.filter(function(u) {
+          return u.id==i
+        })[0]
+      }
+      function dById(i) {
+        return S.deleg.filter(function(d) {
+          return d.id==i
+        })[0]
+      }
+      function dname(i) {
+        var d=dById(i);
+        return d?d.name:"بدون مندوب"
+      }
+      function thm() {
+        return document.documentElement.getAttribute("data-theme")=="dark"?"dark":"light"
+      }
+      function thIcon() {
+        return thm()=="dark"?"☀️":"🌙"
+      }
+      function thBtn(c) {
+        return '<button type="button" class="ib'+(c||"")+'" data-a="theme" title="تبديل الوضع (فاتح / داكن)" aria-label="تبديل الوضع">'+thIcon()+'</button>'
+      }
+      function setTheme(t) {
+        document.documentElement.setAttribute("data-theme",t);
+        try{
+          localStorage.setItem("mb2t",t)
+        } catch(e){}var m=document.querySelector('meta[name=theme-color]');
+        if(m)m.setAttribute("content",t=="dark"?"#06130d":"#f3f7f4");
+        document.querySelectorAll('[data-a=theme]').forEach(function(x) {
+          x.textContent=thIcon()
+        })
+      }
+      function g(i) {
+        var e=document.getElementById(i);
+        return e?e.value:""
+      }
+      function age(b) {
+        if(!b)return"";
+        var d=new Date(b),n=new Date(),a=n.getFullYear()-d.getFullYear();
+        if(n<new Date(n.getFullYear(),d.getMonth(),d.getDate()))a--;
+        return a
+      }
+      function bd(b) {
+        return b?b.split("-").reverse().join("/"):"غير مسجل"
+      }
+      function dt(t) {
+        var d=new Date(t);
+        return d.toLocaleDateString("en-GB")+" "+d.toLocaleTimeString("en-GB",{
+          hour:"2-digit",minute:"2-digit"
+        })
+      }
+      function pe(n) {
+        n=nm(n);
+        return n.indexOf("رز")>-1?"🍚":n.indexOf("سكر")>-1?"🍬":n.indexOf("زيت")>-1?"🫒":n.indexOf("طحين")>-1?"🌾":n.indexOf("عدس")>-1?"🫘":n.indexOf("شاي")>-1?"🍵":n.indexOf("معجون")>-1?"🍅":n.indexOf("ملح")>-1?"🧂":n.indexOf("حليب")>-1?"🥛":"📦"
+      }
+      function leaf(z) {
+        return '<svg width="'+z+'" height="'+z+'" viewBox="0 0 64 64"><defs><linearGradient id="lgf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ade80"/><stop offset="1" stop-color="#15803d"/></linearGradient></defs><path d="M56 6C26 4 8 18 8 40c0 6 2 11 5 15 2-9 9-18 20-24-9 8-13 16-14 25 4 2 9 3 13 2 20-3 29-24 24-52z" fill="url(#lgf)"/></svg>'
+      }
+      /* ===== المساعد الذكي ===== */
+      var KEY=(function() {
+        try{
+          return localStorage.getItem("mb2k")||""
+        } catch(e) {
+          return ""
+        }
+      })(),busy=false;
+      var CH=[{
+        r:"b",x:1,t:"هلا بيك 👋 آني مساعد «وكيل» (للمسؤول فقط).\nأكدر أعرض لك المواد والكميات، عدد المستفيدين والطلبات، الأسعار، ومعلومات أي شخص بالاسم أو الأيدي، وأشرح لك طريقة استخدام المنصة.\nاختر سؤال من القائمة أو اكتب سؤالك."
+      }];
+      function dig(s) {
+        return String(s).replace(/[٠-٩]/g,function(d) {
+          return "٠١٢٣٤٥٦٧٨٩".indexOf(d)
+        })
+      }
+      function stats() {
+        var u=S.users,by={};
+        ST.forEach(function(x) {
+          by[x]=0
+        });
+        u.forEach(function(x) {
+          by[x.status]=(by[x.status]||0)+1
+        });
+        var tp=u.reduce(function(a,x) {
+          return a+x.persons
+        },0);
+        return{
+          n:u.length,tp:tp,by:by,total:tp*S.price
+        }
+      }
+      function modeTxt() {
+        return "جاهز ✓ بدون إنترنت"
+      }
+      function chatHtml() {
+        return CH.map(function(m) {
+          return '<div class="m '+m.r+'">'+esc(m.t).replace(/\n/g,"<br>")+'</div>'
+        }).join("")+(busy?'<div class="m b">⏳ ...</div>':'')
+      }
+      function sc() {
+        var c=document.getElementById("chat");
+        if(c)c.scrollTop=c.scrollHeight
+      }
+      function upd() {
+        var c=document.getElementById("chat");
+        if(c) {
+          c.innerHTML=chatHtml();
+          sc()
+        }
+      }
+      var QG=[["📊 البيانات",["ملخص عام","كم مستخدم مسجل؟","كم عدد الأفراد الكلي؟","كم طلب عندنا وشنو حالتهم؟"]],["📦 المواد والكميات",["كم مادة بالسلة وكمياتها؟","شكد المواد المطلوبة للتوزيع كله؟"]],["💰 الأسعار والتوزيع",["شكد سعر الفرد والمبلغ الكلي؟","شكد تكلفة عائلة من 5 أفراد؟","شنو شهر التوزيع الحالي؟"]],["❓ كيف أستخدم وكيل الغذاء",["شلون أضيف مستخدم؟","شلون أضيف أو أعدل منتج؟","شلون أغير سعر الفرد؟","شلون أبحث عن شخص؟","شلون أغير حالة الطلب؟","شلون أحذف مستخدم؟","شلون أغير رقمي السري؟"]]];
+      function vAI() {
+        return '<div class="two2"><div class="card"><h3>🤖 مساعد وكيل <span class="badge" id="am">'+modeTxt()+'</span></h3><div class="chat" id="chat">'+chatHtml()+'</div><div class="bar" style="margin:10px 0 0"><input id="qi" placeholder="اكتب سؤالك أو اسم شخص أو رقم أيديه..."><button class="p" data-a="ask">إرسال</button></div></div><div class="card"><h3>📋 قائمة الأسئلة</h3><p class="mu" style="margin-top:-6px">اضغط على أي سؤال وأجاوبك مباشرة.</p>'+QG.map(function(z) {
+          return '<div class="sec">'+z[0]+'</div><div class="chips">'+z[1].map(function(x) {
+            return '<button class="chip" data-a="chip" data-q="'+x+'">'+x+'</button>'
+          }).join("")+'</div>'
+        }).join("")+'</div></div>'
+      }
+      function local(q) {
+        var n=nm(dig(q)),st=stats();
+        function has(a) {
+          return a.some(function(w) {
+            return n.indexOf(nm(w))>-1
+          })
+        }
+        var isHelp=has(["كيف","شلون","how","ازاي","اضيف","اضافه","اغير","احذف","اعدل","اسوي","طريقه","اسجل"]);
+        var fu=null,im=n.match(/\d{4,}/);
+        if(im)fu=byId(im[0]);
+        if(!fu) {
+          var best=0,cand=[];
+          S.users.forEach(function(u) {
+            var h=nm(u.name).split(" ").filter(function(p) {
+              return p.length>2&&n.indexOf(p)>-1
+            }).length;
+            if(h>best) {
+              best=h;
+              cand=[u]
+            } else if(h==best&&h>0)cand.push(u)
+          });
+          if(best>=2||(best==1&&cand.length==1&&!isHelp&&has(["معلومات","بيانات","بحث","دور","info","find","search","اعرض","show","شنو","وين"])))fu=cand[0]
+        }
+        if(fu&&!isHelp)return "👤 "+fu.name+"\nرقم الأيدي: "+fu.id+"\nعدد الأفراد: "+fu.persons+"\nالحصة لشهر "+S.month+": "+money(fu.persons*S.price)+"\nالحالة: "+fu.status+"\nالهاتف: "+(fu.phone||"غير مسجل")+"\nالكود: "+fu.p;
+        if(isHelp) {
+          if(has(["سعر"]))return "💰 قسم «الإعدادات» ← سعر الفرد (دينار عراقي). كل المبالغ تتحدث تلقائياً (عدد الأفراد × سعر الفرد).";
+          if(has(["شهر"]))return "📅 قسم «الإعدادات» ← شهر التوزيع، ويظهر للمستفيدين بحسابهم.";
+          if(has(["بحث","دور","ابحث","search"]))return "🔍 بقسم «المستخدمون» اكتب الاسم الثلاثي (أو جزء منه) أو رقم الأيدي بشريط البحث.";
+          if(has(["ماده","مواد","سله","كميه"]))return "🧺 قسم «المنتجات» ← «+ إضافة مادة»، وتكدر تعدل الاسم والكمية والوحدة أو تحذف أي مادة.";
+          if(has(["حاله"]))return "📌 ببطاقة المستفيد غيّر «الحالة»: قيد التجهيز / جاهزة للاستلام / تم الاستلام.";
+          if(has(["حذف"]))return "🗑️ ببطاقة المستفيد اضغط «حذف» وأكّد.";
+          if(has(["رقمي","حسابي","ادمن","مسؤول","admin"])&&has(["سري","password","اسم"]))return "⚙️ قسم «الإعدادات» ← غيّر اسم المسؤول ورقمه السري، ويُحفظ فوراً.";
+          if(has(["دخول","password","login","سري"]))return "🔑 المستفيد يدخل من صفحة الدخول باسمه الكامل والكود اللي تنشئه المنصة عند إضافته، وتلكى الكود ببطاقته ويمكن نسخه.";
+          return "➕ قسم «المستخدمون» ← «+ إضافة مستخدم» ← الاسم الثلاثي والهاتف والمواليد وعدد الأفراد ← «إضافة». ينشأ رقم أيدي وكود دخول تلقائياً، والمستفيد يدخل باسمه والكود. وتكدر تنسخهم وترسلهم للشخص."
+        }
+        var cm=n.match(/(\d{1,3})\s*(فرد|افراد|اشخاص|شخص)/);
+        if(cm&&!isHelp&&has(["كلف","سعر","شكد","مبلغ","كم","price","cost"]))return "🧮 عائلة من "+cm[1]+" أفراد = "+cm[1]+" × "+num(S.price)+" = "+money(cm[1]*S.price);
+        if(has(["ملخص","تقرير","احصائ","summary","report","overview","كل البيانات","شامل","عامه"]))return "📊 ملخص المنصة\nشهر التوزيع: "+S.month+"\nعدد المواد بالسلة: "+S.items.length+"\nالمستفيدون: "+st.n+"\nإجمالي الأفراد: "+st.tp+"\nسعر الفرد: "+money(S.price)+"\nالمبلغ الكلي: "+money(st.total)+"\nالطلبات: "+ST.map(function(x) {
+          return x+" ("+st.by[x]+")"
+        }).join("، ");
+        if(has(["مواد","ماده","اصناف","صنف","كميه","كميات","سله","محتويات","مخزون","items","quantit","stock","basket"])) {
+          var r="📦 عدد المواد بالسلة: "+S.items.length+"\n"+(S.items.map(function(i,k) {
+            return (k+1)+". "+i.n+": "+i.q+" "+i.u
+          }).join("\n")||"السلة فارغة");
+          if(S.items.length)r+="\n\nولأن كل مستفيد يستلم سلة (عددهم "+st.n+")، الكميات الكلية المطلوبة للتوزيع:\n"+S.items.map(function(i) {
+            return "• "+i.n+": "+(parseFloat(i.q)||0)*st.n+" "+i.u
+          }).join("\n");
+          return r
+        }
+        if(has(["طلب","order","استلم","جاهز","حاله","status","تجهيز","pending"]))return "🧾 عدد الطلبات: "+st.n+" (طلب لكل مستفيد)\n"+ST.map(function(x) {
+          return "• "+x+": "+st.by[x]
+        }).join("\n");
+        if(has(["مستخدم","مستفيد","مسجل","حسابات","اشخاص","users","beneficiar","كم شخص"]))return "👥 عدد المستفيدين المسجلين: "+st.n+"\nإجمالي الأفراد: "+st.tp+(st.n?"\nآخر مضاف: "+S.users[0].name+" (#"+S.users[0].id+")":"");
+        if(has(["سعر","مبلغ","اجمالي","كلفه","تكلفه","فلوس","دينار","price","cost","total","money","شكد"]))return "💰 سعر الفرد: "+money(S.price)+"\nإجمالي الأفراد: "+st.tp+"\nالمبلغ الكلي: "+money(st.total)+"\n(عدد الأفراد × سعر الفرد)";
+        if(has(["فرد","افراد","persons","people","members"]))return "👨‍👩‍👧 إجمالي الأفراد: "+st.tp+" ضمن "+st.n+" مستفيد.";
+        if(has(["شهر","month","توزيع"]))return "📅 شهر التوزيع الحالي: "+S.month;
+        if(has(["هلا","مرحبا","السلام","hello","hi","hey","شلونك","شخبارك","صباح","مساء"]))return "هلا وغلا 👋 شتحب تعرف عن المنصة؟";
+        return "ما فهمت سؤالك تماماً 🤔 اسألني مثلاً: «ملخص عام»، «كم مادة بالسلة؟»، «كم طلب جاهز؟»، «شكد المبلغ الكلي؟»، أو اكتب اسم شخص أو رقم أيديه.\nأو اختر أي سؤال من «قائمة الأسئلة» وأجاوبك مباشرة."
+      }
+      function sendQ(q) {
+        q=(q||"").trim();
+        if(!q||busy||!me||me.r!="a")return;
+        var i=document.getElementById("qi");
+        if(i)i.value="";
+        CH.push({
+          r:"u",t:q
+        });
+        busy=true;
+        upd();
+        setTimeout(function() {
+          busy=false;
+          CH.push({
+            r:"b",t:local(q)
+          });
+          upd()
+        },350)
+      }
+      /* ===== الواجهات ===== */
+      var NAV=[["d","🏠","الرئيسية"],["i","📦","المنتجات"],["u","👥","المستخدمون"],["q","🔔","الموافقات"],["r","📊","التقارير"],["s","⚙️","الإعدادات"]];
+      var TT={
+        d:"الرئيسية",i:"المنتجات",u:"المستخدمون",o:"الطلبات",g:"المندوبون",k:"المخزون",r:"التقارير",s:"الإعدادات",n:"إضافة مستخدم",a:"المساعد الذكي",v:"معلومات المستخدم",q:"طلبات الدخول"
+      };
+      function cs() {
+        return cloud=="ok"?(unsynced()?"☁️ قاعدة البيانات: جاري الحفظ":"☁️ قاعدة البيانات: متصلة"):cloud=="err"?"⚠️ قاعدة البيانات: غير متصلة":"⏳ قاعدة البيانات: جاري الاتصال"
+      }
+      function week() {
+        var o=[],L=[],n=new Date();
+        n.setHours(0,0,0,0);
+        for(var i=6;i>=0;i--) {
+          var s=n.getTime()-i*864e5,e=s+864e5;
+          o.push(S.users.filter(function(u) {
+            return u.at>=s&&u.at<e
+          }).length);
+          var d=new Date(s);
+          L.push(d.getDate()+"/"+(d.getMonth()+1))
+        }
+        return{
+          v:o,l:L
+        }
+      }
+      function chart(w) {
+        var W=420,H=170,P=28,m=Math.max.apply(null,w.v.concat([3])),pts=w.v.map(function(v,i) {
+          return[P+i*(W-2*P)/6,H-26-(v/m)*(H-56)]
+        });
+        var line=pts.map(function(p,i) {
+          return(i?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1)
+        }).join(" "),area=line+" L"+pts[6][0]+" "+(H-26)+" L"+pts[0][0]+" "+(H-26)+" Z";
+        return '<svg viewBox="0 0 '+W+' '+H+'" width="100%"><defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22c55e" stop-opacity=".45"/><stop offset="1" stop-color="#22c55e" stop-opacity="0"/></linearGradient></defs>'+
+        [0,1,2,3].map(function(i) {
+          var y=H-26-i*(H-56)/3;
+          return '<line x1="'+P+'" x2="'+(W-P)+'" y1="'+y+'" y2="'+y+'" stroke="#1a3a2a" stroke-dasharray="3 4"/><text x="'+(P-6)+'" y="'+(y+4)+'" fill="#8fb09f" font-size="10" text-anchor="end">'+Math.round(m*i/3)+'</text>'
+        }).join("")+
+        '<path d="'+area+'" fill="url(#ag)"/><path d="'+line+'" fill="none" stroke="#22c55e" stroke-width="2.5"/>'+pts.map(function(p,i) {
+          return '<circle cx="'+p[0]+'" cy="'+p[1]+'" r="3.5" fill="#22c55e"/><text x="'+p[0]+'" y="'+(H-8)+'" fill="#8fb09f" font-size="10" text-anchor="middle">'+w.l[i]+'</text>'
+        }).join("")+'</svg>'
+      }
+      var DC=["#f5a524","#3b82f6","#22c55e"];
+      function donut(st) {
+        var n=Math.max(st.n,1),a=0,gr=ST.map(function(s,k) {
+          var p=(st.by[s]||0)/n*100,r=DC[k]+" "+a+"% "+(a+p)+"%";
+          a+=p;
+          return r
+        }).join(",");
+        return '<div class="dn" style="background:conic-gradient('+(st.n?gr:"#1a3a2a 0 100%")+')"></div>'
+      }
+      function need(i) {
+        return Math.round((parseFloat(i.q)||0)*S.users.length*100)/100
+      }
+      function stSel(u) {
+        return '<select data-f="status" data-id="'+u.id+'">'+ST.map(function(s) {
+          return '<option'+(s==u.status?' selected':'')+'>'+s+'</option>'
+        }).join("")+'</select>'
+      }
+      function dlSel(u) {
+        return '<select data-f="dl" data-id="'+u.id+'"><option value="0">بدون مندوب</option>'+S.deleg.map(function(d) {
+          return '<option value="'+d.id+'"'+(d.id==u.d?' selected':'')+'>'+esc(d.name)+'</option>'
+        }).join("")+'</select>'
+      }
+      function bar(p,c) {
+        return '<div class="tr"><div class="fl '+c+'" style="width:'+Math.min(100,p)+'%"></div></div>'
+      }
+      function vLogin() {
+        return '<div class="lg">'+thBtn(" thf")+'<div class="food">🍅🫒🥬🌽</div><div class="lw"><div class="lt">'+leaf(78)+'<h1>وكيل الغذاء</h1><p>منصة إدارة وتوزيع المواد الغذائية</p><i class="ul"></i></div>'+
+        '<div class="lc'+(err?' shake':'')+'"><h2>مرحبا بك</h2><p class="mu">قم بتسجيل الدخول للوصول إلى حسابك</p>'+
+        '<div class="inp"><span>👤</span><input id="lu" autocomplete="username" placeholder="الاسم الكامل" value="'+esc(lastU)+'"></div>'+
+        '<div class="inp"><span>🪪</span><input id="lp" type="password" dir="ltr" autocomplete="current-password" inputmode="numeric" placeholder="الكود"><button data-a="eye" type="button" aria-label="إظهار أو إخفاء الكود">👁</button></div>'+
+        '<div class="er">'+err+'</div><button class="p lb" data-a="login">تسجيل الدخول ⇥</button></div>'+
+        '<div class="lf"><i></i>'+leaf(24)+'<i></i></div><p class="mu" style="margin:6px 0 0">معاً .. نحو غذاء أفضل</p></div></div>'
+      }
+      function vUser() {
+        var u=byId(me.id);
+        if(!u) { me=null; ses(); return vLogin() }
+        var si=ST.indexOf(u.status),a=age(u.birth),dl=dById(u.d);
+        return '<div class="wrap user-dashboard">'+
+          '<div class="top user-head"><div class="tl"><div class="brand-mark">🥬</div><div><h1>وكيل الغذاء</h1><small>أهلاً '+esc(u.name.split(" ")[0])+' · '+esc(S.month)+'</small></div></div><div class="act">'+thBtn()+'<button data-a="mePage" data-page="menu">الخدمات</button><button data-a="out">خروج 🚪</button></div></div>'+
+          '<section class="card user-identity"><div class="identity-main"><div class="av">'+esc(u.name.charAt(0))+'</div><div class="identity-text"><h2>'+esc(u.name)+'</h2><span class="id">رقم المستفيد #'+u.id+'</span></div><span class="status-pill">'+esc(u.status)+'</span></div><div class="trk">'+ST.map(function(st,k){return '<div class="stp'+(k<=si?' dn2':'')+'"><i>'+(k<=si?'✓':k+1)+'</i><span>'+st+'</span></div>'}).join('')+'</div></section>'+
+          '<section class="card user-info"><h3>👤 بياناتك الشخصية</h3><div class="info-grid">'+
+            '<div class="info-tile"><small>📱 رقم الهاتف</small><b dir="ltr">'+esc(u.phone||'غير مسجل')+'</b></div>'+
+            (u.p2?'<div class="info-tile"><small>📞 رقم بديل</small><b dir="ltr">'+esc(u.p2)+'</b></div>':'')+
+            '<div class="info-tile"><small>🎂 تاريخ الميلاد</small><b>'+bd(u.birth)+(a!==''?' · '+a+' سنة':'')+'</b></div>'+
+            '<div class="info-tile"><small>👨‍👩‍👧 عدد أفراد الأسرة</small><b>'+u.persons+' أفراد</b></div>'+
+            (dl?'<div class="info-tile"><small>🚚 المندوب المسؤول</small><b>'+esc(dl.name)+(dl.phone?' · <span dir="ltr">'+esc(dl.phone)+'</span>':'')+'</b></div>':'')+
+          '</div><div class="qrbox user-qr"><div class="qrcode" data-qrcode="WK-'+u.id+'"></div><div><b>رمز QR الخاص بك</b><p class="mu">اعرض الرمز للوكيل حتى يعثر على بياناتك بسرعة</p><span class="id">WK-'+u.id+'</span></div></div></section>'+
+          '<section class="card user-share"><h3>💰 حصة شهر '+esc(S.month)+'</h3><div class="share-details"><div><small>سعر الفرد</small><b>'+money(S.price)+'</b></div><div><small>عدد الأفراد</small><b>'+u.persons+'</b></div></div><div class="share-total"><small>المبلغ الإجمالي المستحق</small><strong>'+num(u.persons*S.price)+'</strong><span>'+u.persons+' × '+num(S.price)+' دينار عراقي</span></div></section>'+
+          '<section class="card user-location"><div class="section-head"><h3>📍 موقع السكن</h3><span class="badge '+(u.loc?'s2':'s0')+'">'+(u.loc?'تم الإرسال':'غير مرسل')+'</span></div>'+(u.loc?'<div class="info-tile"><small>آخر إحداثيات مرسلة</small><b dir="ltr">'+u.loc.lat.toFixed(5)+', '+u.loc.lng.toFixed(5)+'</b><small>الدقة ±'+u.loc.acc+' متر · '+dt(u.loc.t)+'</small></div><p>'+mpBtn(u)+'</p>':'<p class="mu">أرسل موقع سكنك حتى يتمكن الوكيل من الوصول إليك بسهولة.</p>')+'<button class="p" data-a="loc" style="width:100%">📍 '+(u.loc?'تحديث الموقع':'إرسال موقعي للوكيل')+'</button></section>'+
+          '<section class="card user-basket"><div class="section-head"><h3>🧺 محتويات السلة</h3><span class="badge">'+S.items.length+' مواد</span></div>'+(S.items.map(function(i){return '<div class="basket-row"><b>'+pe(i.n)+' '+esc(i.n)+'</b><span>'+esc(i.q)+' '+esc(i.u)+'</span></div>'}).join('')||'<div class="empty-basket">🛒<b>السلة فارغة حالياً</b><small>ستظهر المواد هنا عند إضافتها من الوكيل</small></div>')+'</section></div>'
+      }
+      /* ---- أقسام المسؤول ---- */
+      function nRows() {
+        var t=nm(dig(dq)).split(/\s+/).filter(Boolean),rec=S.users.slice().sort(function(a,b) {
+          return(b.at||0)-(a.at||0)
+        }).filter(function(u) {
+          var h=nm(u.name)+" "+u.id+" "+(u.phone||"")+" "+(u.p2||"");
+          return t.every(function(x) {
+            return h.indexOf(x)>-1
+          })
+        });
+        return rec.map(function(u) {
+          return '<tr class="cl" data-a="view" data-id="'+u.id+'"><td><b>'+esc(u.name)+'</b>'+(u.loc?' 📍':'')+'</td><td>'+u.persons+'</td><td>'+esc(S.month)+'</td></tr>'
+        }).join("")||'<tr><td colspan="3" class="mu">'+(dq.trim()?"لا نتائج مطابقة":"لا يوجد")+'</td></tr>'
+      }
+      function pRows() {
+        var t=nm(dig(pq)).split(/\s+/).filter(Boolean),rec=S.users.filter(function(u) {
+          var h=nm(u.name);
+          return t.every(function(x) {
+            return h.indexOf(x)>-1||(/^\d+$/.test(x)&&u.persons==+x)
+          })
+        }),gm={},tp=0;
+        rec.forEach(function(u) {
+          gm[u.persons]=(gm[u.persons]||0)+1;
+          tp+=u.persons
+        });
+        var ks=Object.keys(gm).map(Number).sort(function(a,b) {
+          return a-b
+        });
+        return ks.map(function(k) {
+          return '<tr><td>'+k+' أفراد</td><td>'+gm[k]+'</td><td>'+k*gm[k]+'</td></tr>'
+        }).join("")+(ks.length?'<tr><td><b>المجموع</b></td><td><b>'+rec.length+'</b></td><td><b>'+tp+'</b></td></tr>':'<tr><td colspan="3" class="mu">'+(pq.trim()?"لا نتائج مطابقة":"لا يوجد")+'</td></tr>')
+      }
+      function sDash() {
+        var tp=S.users.reduce(function(a,u) {
+          return a+u.persons
+        },0),pc=PC();
+        return '<div class="card" style="margin-bottom:12px"><div class="ch"><h3 style="margin:0">☁️ قاعدة البيانات Supabase</h3><span class="badge '+(cloud=="ok"&&!unsynced()?"s2":cloud=="err"?"s0":"")+'">'+cs()+'</span></div><p class="mu" style="margin:8px 0 0">بيانات المستفيدين والمواد والطلبات محفوظة في قاعدة مشتركة، وأي تحديث من جهاز أدمن يظهر على بقية الأجهزة تلقائياً.</p></div>'+
+        (pc?'<div class="card new" style="margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:8px"><b>🔔 '+pc+' طلب دخول بانتظار موافقتك</b><button class="p" data-a="nav" data-t="q">عرض الطلبات</button></div>':'')+
+        '<div class="two2"><div class="card"><h3>📋 قائمة الأسماء</h3><p class="mu" style="margin-top:-6px">شهر السلة: '+esc(S.month)+' · '+S.users.length+' مستفيد · اضغط على أي اسم لعرض معلوماته كاملة</p><input id="dq" type="search" placeholder="🔍 ابحث بالاسم / الأيدي / الهاتف" value="'+esc(dq)+'" style="margin-bottom:10px"><div class="scroll"><table><tr><th>الاسم</th><th>الأفراد</th><th>شهر السلة</th></tr><tbody id="nt">'+nRows()+'</tbody></table></div><p style="margin:12px 0 0"><button class="p" data-a="pdf">📄 تنزيل الجرد الشهري (PDF)</button></p></div>'+
+        '<div class="card"><h3>👨‍👩‍👧 قائمة الأفراد</h3><p class="mu" style="margin-top:-6px">إجمالي الأفراد: '+tp+'</p><input id="pq" type="search" placeholder="🔍 ابحث بالاسم أو بعدد الأفراد (مثلاً 5)" value="'+esc(pq)+'" style="margin-bottom:10px"><div class="scroll"><table><tr><th>حجم العائلة</th><th>عدد العوائل</th><th>مجموع الأفراد</th></tr><tbody id="pt">'+pRows()+'</tbody></table></div></div></div>'
+      }
+      function sReq() {
+        var P=S.reqs.filter(function(x) {
+          return x.st=="p"
+        }),H=S.reqs.filter(function(x) {
+          return x.st!="p"
+        }).sort(function(a,b) {
+          return(b.ok||b.at)-(a.ok||a.at)
+        }).slice(0,30);
+        return '<p class="mu" style="margin-top:0">عند تسجيل دخول أي مستفيد بالاسم والكود يصلك طلب هنا، ولا يدخل إلا بعد موافقتك. ويظهر الطلب فوراً على كل أجهزة الأدمن.</p><div class="grid">'+
+        (P.map(function(x) {
+          var u=byId(x.uid);
+          return '<div class="card new"><div class="ch"><span class="id">#'+x.uid+'</span><span class="badge s0">بانتظار الموافقة</span></div><b>'+esc(x.name)+'</b><div class="mu">📅 '+dt(x.at)+' · 📲 '+esc(x.dev||"")+'</div>'+(u?'<div class="mu">📱 <span dir="ltr">'+esc(u.phone||"-")+'</span> · 👨‍👩‍👧 '+u.persons+' أفراد</div>':'')+'<div class="two" style="margin-top:10px"><button class="p" data-a="ra" data-id="'+x.id+'">✅ قبول</button><button class="d" data-a="rj" data-id="'+x.id+'">❌ رفض</button></div></div>'
+        }).join("")||'<p class="mu">لا توجد طلبات معلقة حالياً.</p>')+'</div>'+
+        '<div class="card" style="margin-top:12px"><div class="ch"><h3 style="margin:0">🕘 السجل</h3>'+(H.some(function(x) {
+          return x.st=="r"
+        })?'<button data-a="rc">مسح المرفوضة</button>':'')+'</div>'+
+        (H.map(function(x) {
+          return '<div class="or"><div class="oi"><b>#'+x.uid+' · '+esc(x.name)+'</b><small class="mu">'+dt(x.ok||x.at)+' · '+esc(x.dev||"")+'</small></div><div class="om"><span class="badge '+(x.st=="a"?'s2':'')+'"'+(x.st=="r"?' style="background:rgba(248,113,113,.15);color:var(--dg)"':'')+'>'+(x.st=="a"?'مقبول (متصل)':'مرفوض')+'</span>'+(x.st=="a"?'<button class="d" data-a="rv" data-id="'+x.id+'">إلغاء الوصول</button>':'')+'</div></div>'
+        }).join("")||'<p class="mu">لا يوجد سجل بعد.</p>')+'</div>'
+      }
+      function sDetail() {
+        var u=byId(vid);
+        if(!u) {
+          tab="d";
+          return sDash()
+        }
+        var a=age(u.birth),dl=dById(u.d);
+        if(!Array.isArray(u.debts))u.debts=[];
+        function row(k,v) {
+          return '<div class="it"><span>'+k+'</span><b>'+v+'</b></div>'
+        }
+        var debts=u.debts.slice().sort(function(x,y) {
+          return(y.at||0)-(x.at||0)
+        }),all=u.debts.reduce(function(z,d) {
+          return z+(+d.amount||0)
+        },0),paid=u.debts.reduce(function(z,d) {
+          return z+(+d.paid||0)
+        },0),due=all-paid;
+        var debtRows=debts.map(function(d) {
+          var rem=Math.max(0,(+d.amount||0)-(+d.paid||0));
+          return '<div class="it" style="align-items:flex-start"><div style="flex:1"><b>'+esc(d.month||"—")+'</b><div class="mu">'+esc(d.note||"بدون ملاحظة")+'</div><small>الدين: '+num(d.amount)+' د.ع · المسدد: '+num(d.paid||0)+' د.ع</small><div class="tot" style="margin-top:5px">المتبقي: '+num(rem)+' د.ع</div></div><div class="chips" style="flex-direction:column"><button data-a="debtPay" data-id="'+u.id+'" data-debt="'+esc(d.id)+'">💵 تسديد</button><button class="d" data-a="debtDel" data-id="'+u.id+'" data-debt="'+esc(d.id)+'">حذف</button></div></div>'
+        }).join("");
+        return '<p><button data-a="nav" data-t="d">→ رجوع للقائمة</button></p><div class="card"><div style="display:flex;gap:14px;align-items:center"><div class="av">'+esc(u.name.charAt(0))+'</div><div><h2 style="margin:0">'+esc(u.name)+'</h2><span class="id">#'+u.id+'</span> <span class="badge s'+ST.indexOf(u.status)+'">'+u.status+'</span></div></div>'+
+        '<div class="chips" style="margin:14px 0 4px">'+waBtn(u,u.phone,"واتساب")+(u.p2?waBtn(u,u.p2,"واتساب (الرقم الثاني)"):"")+mpBtn(u)+'<button data-a="cp" data-id="'+u.id+'">نسخ بيانات الدخول</button></div></div>'+
+        '<div class="two2" style="margin-top:12px"><div class="card"><h3>👤 المعلومات الشخصية</h3>'+row("📱 الهاتف",'<span dir="ltr">'+esc(u.phone||"-")+'</span>')+(u.p2?row("📞 رقم ثاني",'<span dir="ltr">'+esc(u.p2)+'</span>'):"")+(u.birth?row("🎂 المولد",bd(u.birth)+(a!==""?" ("+a+" سنة)":"")):"")+row("👨‍👩‍👧 عدد الأفراد",u.persons)+row("📅 تاريخ التسجيل",u.at?dt(u.at):"—")+row("🔑 الكود",'<span dir="ltr">'+esc(u.p)+'</span>')+'</div>'+
+        '<div class="card"><h3>🧾 الطلب والحصة</h3>'+row("📅 شهر السلة",esc(S.month))+row("📌 الحالة",u.status)+row("💰 سعر الفرد",money(S.price))+row("المبلغ",money(u.persons*S.price))+(dl?row("🚚 المندوب",esc(dl.name)):"")+'</div></div>'+
+        '<div class="card" style="margin-top:12px"><h3>💳 سجل الديون الخاص بالمستخدم</h3><p class="mu">أضف الدين يدوياً وحدد شهره. يمكنك تسجيل تسديد كلي أو جزئي، وكل المبالغ بالدينار العراقي.</p><div class="two"><div><label>الشهر</label><input id="debtMonth" value="'+esc(S.month)+'" placeholder="مثال: تشرين الأول 2026"></div><div><label>مبلغ الدين (د.ع)</label><input id="debtAmount" type="number" min="1" step="1" placeholder="مثال: 250000"></div></div><label>ملاحظة (اختياري)</label><input id="debtNote" placeholder="سبب الدين أو تفاصيله"><button class="p" data-a="debtAdd" data-id="'+u.id+'" style="width:100%;margin-top:10px">➕ إضافة الدين</button><div class="two2" style="margin:12px 0 0"><div class="tot">إجمالي الديون: '+num(all)+' د.ع</div><div class="tot">المسدّد: '+num(paid)+' د.ع</div><div class="tot">المتبقي: '+num(due)+' د.ع</div></div><div class="sec">📚 الحركات المسجلة</div>'+(debtRows||'<p class="mu">لا توجد ديون مسجلة لهذا المستخدم.</p>')+'</div>'+
+        '<div class="card" style="margin-top:12px"><h3>📍 الموقع</h3>'+(u.loc?row("الإحداثيات",'<span dir="ltr">'+u.loc.lat.toFixed(6)+', '+u.loc.lng.toFixed(6)+'</span>')+row("دقة التحديد","±"+u.loc.acc+" متر")+row("وقت الإرسال",dt(u.loc.t))+'<p style="margin:10px 0 0">'+mpBtn(u)+'</p>':'<p class="mu">المستخدم لم يرسل موقعه بعد.</p>')+'</div>'+
+        '<div class="card" style="margin-top:12px"><h3>🧺 محتويات السلة</h3>'+(S.items.map(function(i) {
+          return row(pe(i.n)+" "+esc(i.n),esc(i.q)+" "+esc(i.u))
+        }).join("")||'<p class="mu">السلة فارغة.</p>')+'</div>'
+      }
+      var UN=["كيلو","عدد"];
+      function unSel(i,k) {
+        var l=UN.indexOf(i.u)<0&&i.u?UN.concat([i.u]):UN;
+        return '<select data-f="iu" data-k="'+k+'">'+l.map(function(x) {
+          return '<option'+(x==i.u?' selected':'')+'>'+esc(x)+'</option>'
+        }).join("")+'</select>'
+      }
+      function sItems() {
+        return '<div class="bar"><span class="mu">'+S.items.length+' منتج · الكمية لكل سلة؛ مثال: 5 كيلو = 5 كغم لكل مستفيد، والإجمالي يُحسب تلقائياً</span><button class="p" data-a="addi">+ إضافة منتج</button></div><div class="grid">'+
+        S.items.map(function(i,k) {
+          return '<div class="card"><div class="ch"><span style="font-size:1.8rem">'+pe(i.n)+'</span><button class="d" data-a="di" data-k="'+k+'">🗑️ حذف</button></div><label>اسم المنتج</label><input data-f="in" data-k="'+k+'" value="'+esc(i.n)+'"><div class="two"><div><label>الكمية لكل سلة</label><input type="number" min="0" step="'+(i.u=="عدد"?1:"any")+'" data-f="iq" data-k="'+k+'" value="'+esc(i.q)+'"></div><div><label>الوحدة</label>'+unSel(i,k)+'</div></div><div class="tot">للتوزيع الكلي: '+need(i)+' '+esc(i.u)+'</div></div>'
+        }).join("")+'</div>'
+      }
+      function uCard(u) {
+        var a=age(u.birth);
+        return '<div class="card'+(hl==u.id?' hl':'')+'"><div class="ch"><span class="id">#'+u.id+'</span><span class="badge s'+ST.indexOf(u.status)+'">'+u.status+'</span><button class="d" data-a="del" data-id="'+u.id+'">🗑️</button></div>'+
+        '<input class="nm" data-f="n" data-id="'+u.id+'" value="'+esc(u.name)+'"><div class="mu">📅 '+(u.at?dt(u.at):"—")+'</div>'+
+        '<div class="sec">📇 بيانات الاتصال</div><div class="two"><div><label>📱 الهاتف</label><input dir="ltr" data-f="phone" data-id="'+u.id+'" value="'+esc(u.phone)+'"></div><div><label>📞 رقم ثاني</label><input dir="ltr" data-f="p2" data-id="'+u.id+'" value="'+esc(u.p2)+'"></div></div>'+
+        '<div class="sec">🪪 معلومات شخصية</div><div class="two"><div><label>🎂 المولد'+(a!==""?' ('+a+' سنة)':'')+'</label><input type="date" data-f="birth" data-id="'+u.id+'" value="'+esc(u.birth)+'"></div><div><label>👨‍👩‍👧 الأفراد</label><input type="number" min="1" data-f="persons" data-id="'+u.id+'" value="'+u.persons+'"></div></div>'+
+        '<div class="sec">📌 الحالة والمندوب</div><div class="two">'+stSel(u)+dlSel(u)+'</div>'+
+        '<div class="sec">💬 التواصل والموقع</div><div class="chips">'+waBtn(u,u.phone)+mpBtn(u)+(u.loc?'':'<span class="mu">لم يرسل موقعه</span>')+'<button data-a="view" data-id="'+u.id+'">معلومات كاملة</button></div>'+'<div class="cred">🔑 الكود: <b>'+esc(u.p)+'</b> <button data-a="cp" data-id="'+u.id+'" style="padding:2px 10px;margin-inline-start:6px">نسخ</button></div><div class="tot">'+num(u.persons*S.price)+' د.ع</div></div>'
+      }
+      function uCards() {
+        var t=nm(q).split(/\s+/).filter(Boolean),r=S.users.filter(function(u) {
+          var h=nm(u.name)+" "+u.id+" "+(u.phone||"")+" "+(u.p2||"");
+          return t.every(function(x) {
+            return h.indexOf(x)>-1
+          })
+        });
+        return r.map(uCard).join("")||'<p class="mu">لا نتائج مطابقة.</p>'
+      }
+      function sUsers() {
+        var h="";
+        if(nw)h+='<div class="card new"><b>✅ تمت إضافة «'+esc(nw.name)+'» وأُنشئت بطاقته</b><div class="cred">رقم الأيدي: <b>'+nw.id+'</b><br>👤 الاسم: <b>'+esc(nw.name)+'</b><br>🔑 الكود: <b>'+esc(nw.p)+'</b></div><p class="mu" style="margin:8px 0 0">يسجّل الدخول بهذا الاسم وهذا الكود.</p><p style="margin:8px 0 0"><button data-a="cp" data-id="'+nw.id+'">نسخ بيانات الدخول</button> <button data-a="hide">إغلاق</button></p></div>';
+        return h+'<div class="bar"><input id="q" placeholder="🔍 اسم / أيدي / هاتف" value="'+esc(q)+'"><button class="p" data-a="nav" data-t="n">+ إضافة مستخدم</button></div><div class="grid" id="ul">'+uCards()+'</div>'
+      }
+      function sNew() {
+        return '<div class="card" style="max-width:640px"><h3>➕ بيانات المستخدم الجديد</h3><label>الاسم الثلاثي *</label><input id="an" placeholder="مثال: أحمد علي حسن"><div class="two"><div><label>📱 رقم الهاتف *</label><input id="ah" dir="ltr" type="tel"></div><div><label>📞 رقم ثاني (إن وجد)</label><input id="ah2" dir="ltr" type="tel"></div></div><label>👨‍👩‍👧 عدد الأفراد *</label><input id="ap" type="number" min="1" value="5"><p class="mu">يُنشأ تلقائياً رقم أيدي وكود دخول (6 أرقام)، والمستفيد يسجّل الدخول باسمه الثلاثي وهذا الكود.</p><button class="p" data-a="add" style="width:100%;padding:12px">إضافة المستخدم</button></div>'
+      }
+      function sOrders() {
+        var l=S.users.slice().sort(function(a,b) {
+          return(b.at||0)-(a.at||0)
+        }).filter(function(u) {
+          return flt<0||u.status==ST[flt]
+        });
+        var tb=[["الكل",-1]].concat(ST.map(function(s,k) {
+          return[s,k]
+        })).map(function(x) {
+          var n=x[1]<0?S.users.length:S.users.filter(function(u) {
+            return u.status==ST[x[1]]
+          }).length;
+          return '<button class="chip'+(flt==x[1]?' on':'')+'" data-a="flt" data-v="'+x[1]+'">'+x[0]+' ('+n+')</button>'
+        }).join("");
+        return '<div class="chips" style="margin-bottom:12px">'+tb+'</div><div class="card">'+(l.map(function(u) {
+          return '<div class="or"><div class="oi"><b>#'+u.id+' · '+esc(u.name)+'</b><small class="mu">'+u.persons+' أفراد · '+(u.at?dt(u.at):"—")+'</small></div><div class="om"><b>'+num(u.persons*S.price)+' د.ع</b>'+dlSel(u)+stSel(u)+'</div></div>'
+        }).join("")||'<p class="mu">لا توجد طلبات.</p>')+'</div>'
+      }
+      function sDeleg() {
+        return '<div class="card" style="margin-bottom:12px"><h3>➕ إضافة مندوب</h3><div class="two"><div><label>الاسم</label><input id="dnm"></div><div><label>الهاتف</label><input id="dph" dir="ltr" type="tel"></div></div><p style="margin:10px 0 0"><button class="p" data-a="addd">إضافة</button></p></div><div class="grid">'+
+        (S.deleg.map(function(d) {
+          var n=S.users.filter(function(u) {
+            return u.d==d.id
+          }).length;
+          return '<div class="card"><div class="ch"><span class="id">🚚 #'+d.id+'</span><button class="d" data-a="delD" data-id="'+d.id+'">🗑️</button></div><input class="nm" data-f="dn" data-id="'+d.id+'" value="'+esc(d.name)+'"><label>الهاتف</label><input dir="ltr" data-f="dp" data-id="'+d.id+'" value="'+esc(d.phone)+'"><div class="tot">الطلبات المسندة: '+n+'</div></div>'
+        }).join("")||'<p class="mu">لا يوجد مندوبون بعد.</p>')+'</div>'
+      }
+      function sStock() {
+        return '<p class="mu">المخزون المتوفر مقابل المطلوب لتوزيع '+S.users.length+' سلة.</p><div class="grid">'+(S.items.map(function(i,k) {
+          var nd=need(i),s=parseFloat(i.s)||0,p=nd?Math.round(s/nd*100):100;
+          return '<div class="card"><div class="ch"><b>'+pe(i.n)+' '+esc(i.n)+'</b><span class="badge '+(p>=100?'s2':p>=50?'s0':'')+'" '+(p<50?'style="background:rgba(248,113,113,.15);color:var(--dg)"':'')+'>'+p+'%</span></div><label>المتوفر في المخزون ('+esc(i.u)+')</label><input type="number" min="0" step="any" data-f="is" data-k="'+k+'" value="'+esc(i.s==null?0:i.s)+'"><div class="pl" style="margin-top:10px"><span>المطلوب: '+nd+' '+esc(i.u)+'</span><b>'+(s>=nd?'✓ كافٍ':'ينقص '+Math.round((nd-s)*100)/100)+'</b></div>'+bar(p,p>=100?"f2":p>=50?"f0":"fr")+'</div>'
+        }).join("")||'<p class="mu">لا توجد منتجات.</p>')+'</div>'
+      }
+      function sReport() {
+        var st=stats(),un=S.users.filter(function(u) {
+          return !dById(u.d)
+        }).length;
+        return '<div class="stats"><div class="st"><i>💰</i><div><span>المبلغ الكلي</span><b style="font-size:1.1rem">'+num(st.total)+'</b><small>دينار عراقي</small></div></div><div class="st"><i>👨‍👩‍👧</i><div><span>إجمالي الأفراد</span><b>'+st.tp+'</b></div></div><div class="st"><i>🛒</i><div><span>الطلبات</span><b>'+st.n+'</b></div></div><div class="st"><i>🚚</i><div><span>المندوبون</span><b>'+S.deleg.length+'</b></div></div></div>'+
+        '<div class="two2"><div class="card"><h3>📌 حسب الحالة</h3>'+ST.map(function(s) {
+          return '<div class="it"><span>'+s+'</span><b>'+(st.by[s]||0)+'</b></div>'
+        }).join("")+'</div><div class="card"><h3>🚚 حسب المندوب</h3>'+S.deleg.map(function(d) {
+          return '<div class="it"><span>'+esc(d.name)+'</span><b>'+S.users.filter(function(u) {
+            return u.d==d.id
+          }).length+'</b></div>'
+        }).join("")+'<div class="it"><span>بدون مندوب</span><b>'+un+'</b></div></div></div>'+
+        '<div class="card"><h3>📦 احتياج التوزيع</h3>'+(S.items.map(function(i) {
+          return '<div class="it"><span>'+pe(i.n)+' '+esc(i.n)+'</span><b>'+need(i)+' '+esc(i.u)+'</b></div>'
+        }).join("")||'<p class="mu">لا توجد منتجات.</p>')+'</div><p><button class="p" data-a="pdf">📄 جرد شهري (PDF)</button> <button data-a="csv">⬇ تصدير المستخدمين (CSV)</button> <button data-a="prn">🖨 طباعة التقرير</button></p>'
+      }
+      function csv() {
+        var r=[["الأيدي","الاسم","الهاتف","رقم ثاني","المولد","الأفراد","المبلغ","الحالة","المندوب","الكود"]].concat(S.users.map(function(u) {
+          return[u.id,u.name,u.phone,u.p2,u.birth,u.persons,u.persons*S.price,u.status,dname(u.d),u.p]
+        }));
+        var t="\ufeff"+r.map(function(x) {
+          return x.map(function(c) {
+            return '"'+String(c==null?"":c).replace(/"/g,'""')+'"'
+          }).join(",")
+        }).join("\n"),a=document.createElement("a");
+        a.href=URL.createObjectURL(new Blob([t],{
+          type:"text/csv"
+        }));
+        a.download="wakeel-users.csv";
+        a.click()
+      }
+      /* ===== الجرد الشهري PDF ===== */
+      function fontsReady() {
+        var fs=document.fonts;
+        if(!fs||!fs.load)return Promise.resolve();
+        return Promise.race([Promise.all([fs.load("400 14px Tajawal"),fs.load("700 14px Tajawal"),fs.load("800 14px Tajawal")]),new Promise(function(r) {
+          setTimeout(r,2500)
+        })]).catch(function(){})
+      }
+      function jardBuild(total) {
+        var PW=794,PH=1123,M=40,CW=PW-2*M,FOOT=46,dry=!total,out=[],cnt=0,c=null,x=null,cur={
+          y:0
+        },
+        FF='Tajawal,"Segoe UI",Tahoma,Arial,sans-serif',LEAF="M56 6C26 4 8 18 8 40c0 6 2 11 5 15 2-9 9-18 20-24-9 8-13 16-14 25 4 2 9 3 13 2 20-3 29-24 24-52z";
+        function T(t,X,Y,sz,w,col,al,mw) {
+          x.font=w+" "+sz+"px "+FF;
+          x.fillStyle=col;
+          x.textAlign=al||"right";
+          t=String(t==null?"":t);
+          if(mw&&x.measureText(t).width>mw) {
+            while(t.length>1&&x.measureText(t+"…").width>mw)t=t.slice(0,-1);
+            t+="…"
+          }
+          x.fillText(t,X,Y)
+        }
+        function R(X,Y,w,h,fill,stroke,r) {
+          x.beginPath();
+          if(r&&x.roundRect)x.roundRect(X,Y,w,h,r);
+          else x.rect(X,Y,w,h);
+          if(fill) {
+            x.fillStyle=fill;
+            x.fill()
+          }
+          if(stroke) {
+            x.strokeStyle=stroke;
+            x.lineWidth=1;
+            x.stroke()
+          }
+        }
+        function L(y) {
+          x.strokeStyle="#d3e3d9";
+          x.lineWidth=1;
+          x.beginPath();
+          x.moveTo(M,y);
+          x.lineTo(PW-M,y);
+          x.stroke()
+        }
+        function fin() {
+          T("وكيل الغذاء — الجرد الشهري — "+S.month,PW-M,PH-20,10,"400","#5b7566","right");
+          L(PH-34);
+          T("صفحة "+cnt+" من "+total,M,PH-20,10,"400","#5b7566","left");
+          var d=c.toDataURL("image/jpeg",.9),b=atob(d.slice(23)),u=new Uint8Array(b.length);
+          for(var i=0;i<b.length;i++)u[i]=b.charCodeAt(i);
+          out.push(u);
+          c.width=c.height=0
+        }
+        function np() {
+          if(c&&!dry)fin();
+          cnt++;
+          if(!c||!dry) {
+            c=document.createElement("canvas");
+            c.width=1240;
+            c.height=1754;
+            x=c.getContext("2d")
+          }
+          x.setTransform(1240/PW,0,0,1754/PH,0,0);
+          x.fillStyle="#fff";
+          x.fillRect(0,0,PW,PH);
+          x.direction="rtl";
+          x.textBaseline="middle";
+          cur.y=M
+        }
+        function head() {
+          np();
+          R(0,0,PW,8,"#15803d");
+          x.save();
+          x.translate(PW-M-42,24);
+          x.scale(42/64,42/64);
+          x.fillStyle="#15803d";
+          x.fill(new Path2D(LEAF));
+          x.restore();
+          T("وكيل الغذاء",PW-M-54,34,24,"800","#10261a","right");
+          T("منصة إدارة وتوزيع المواد الغذائية",PW-M-54,56,11,"400","#5b7566","right");
+          T("الجرد الشهري",M,34,24,"800","#15803d","left");
+          T("شهر التوزيع: "+S.month,M,56,12.5,"700","#10261a","left");
+          T("تاريخ الإصدار: "+dt(Date.now()),M,74,10.5,"400","#5b7566","left");
+          L(88);
+          cur.y=104
+        }
+        function summary(st) {
+          var it=[["المستفيدون",String(st.n),0],["إجمالي الأفراد",String(st.tp),0],["سعر الفرد (د.ع)",num(S.price),0],["المبلغ الكلي (د.ع)",num(st.total),1]],g=10,w=(CW-3*g)/4,X=PW-M-w;
+          it.forEach(function(a) {
+            R(X,cur.y,w,58,a[2]?"#15803d":"#f3f8f5",a[2]?null:"#d3e3d9",10);
+            T(a[0],X+w/2,cur.y+18,10.5,"700",a[2]?"#dff5e6":"#5b7566","center");
+            T(a[1],X+w/2,cur.y+40,18,"800",a[2]?"#fff":"#10261a","center");
+            X-=w+g
+          });
+          cur.y+=80
+        }
+        function sec(t) {
+          if(cur.y+110>PH-FOOT)np();
+          R(PW-M-5,cur.y,5,18,"#15803d");
+          T(t,PW-M-14,cur.y+9,14.5,"800","#10261a","right");
+          cur.y+=28
+        }
+        function table(cols,rows,empty,tot) {
+          var RH=26,HH=28;
+          function th() {
+            R(M,cur.y,CW,HH,"#15803d");
+            var X=PW-M;
+            cols.forEach(function(k) {
+              T(k.t,k.a=="c"?X-k.w/2:X-10,cur.y+HH/2,11.5,"700","#fff",k.a=="c"?"center":"right");
+              X-=k.w
+            });
+            cur.y+=HH
+          }
+          th();
+          if(!rows.length) {
+            R(M,cur.y,CW,RH+6,"#fff","#d3e3d9");
+            T(empty,PW/2,cur.y+(RH+6)/2,12,"400","#5b7566","center");
+            cur.y+=RH+6
+          }
+          rows.forEach(function(r,i) {
+            if(cur.y+RH>PH-FOOT) {
+              np();
+              th()
+            }
+            R(M,cur.y,CW,RH,i%2?"#f3f8f5":"#fff","#d3e3d9");
+            var X=PW-M;
+            cols.forEach(function(k,j) {
+              var v=r[j],col="#10261a",wt="400";
+              if(v&&typeof v=="object") {
+                col=v.c||col;
+                wt=v.w||wt;
+                v=v.t
+              }
+              T(v,k.a=="c"?X-k.w/2:X-10,cur.y+RH/2,12,wt,col,k.a=="c"?"center":"right",k.w-16);
+              X-=k.w
+            });
+            cur.y+=RH
+          });
+          if(tot!=null) {
+            if(cur.y+40>PH-FOOT)np();
+            R(M,cur.y,CW,34,"#e4f4e9","#15803d");
+            T("المبلغ الكلي لشهر "+S.month,PW-M-10,cur.y+17,13,"800","#10261a","right");
+            T(num(tot)+" دينار عراقي",M+10,cur.y+17,15,"800","#15803d","left");
+            cur.y+=34
+          }
+          cur.y+=24
+        }
+        var st=stats(),SC={
+          "تم الاستلام":"#15803d","جاهزة للاستلام":"#1d4ed8","قيد التجهيز":"#b45309"
+        };
+        head();
+        summary(st);
+        sec("قائمة الأسماء والمبالغ");
+        table([{
+          t:"ت",w:40,a:"c"
+        },{
+          t:"الاسم",w:330
+        },{
+          t:"الأفراد",w:120,a:"c"
+        },{
+          t:"المبلغ (د.ع)",w:224,a:"c"
+        }],
+        S.users.slice().sort(function(a,b) {
+          return a.id-b.id
+        }).map(function(u,i) {
+          return[i+1,u.name,u.persons,num(u.persons*S.price)]
+        }),"لا يوجد مستفيدون مسجلون",st.total);
+        sec("المواد (لكل سلة)");
+        table([{
+          t:"ت",w:40,a:"c"
+        },{
+          t:"المادة",w:400
+        },{
+          t:"الكمية",w:274,a:"c"
+        }],
+        S.items.map(function(i,k) {
+          return[k+1,i.n||"—",i.q+" "+i.u]
+        }),"لا توجد مواد مضافة");
+        var monthDebts=[];
+        S.users.forEach(function(u) {
+          (u.debts||[]).forEach(function(d) {
+            if(String(d.month||"").trim()==String(S.month||"").trim())monthDebts.push({
+              name:u.name,amount:+d.amount||0,paid:+d.paid||0,month:d.month,note:d.note||"—",dir:d.dir||"user_to_admin"
+            })
+          })
+        });
+        var userOwes=monthDebts.filter(function(d) {
+          return d.dir=="user_to_admin"
+        }),adminOwes=monthDebts.filter(function(d) {
+          return d.dir=="admin_to_user"
+        });
+        function dsum(xs,k) {
+          return xs.reduce(function(a,d) {
+            return a+(+d[k]||0)
+          },0)
+        }
+        function drem(xs) {
+          return xs.reduce(function(a,d) {
+            return a+Math.max(0,(+d.amount||0)-(+d.paid||0))
+          },0)
+        }
+        var debtTotal=dsum(monthDebts,"amount"),debtPaid=dsum(monthDebts,"paid"),debtDue=drem(monthDebts);
+        sec("سجل الديون — "+S.month);
+        table([{
+          t:"الاتجاه",w:220
+        },{
+          t:"إجمالي الدين",w:164,a:"c"
+        },{
+          t:"المسدّد",w:164,a:"c"
+        },{
+          t:"المتبقي",w:166,a:"c"
+        }],[
+        ["المستخدم مدين للمسؤول",num(dsum(userOwes,"amount"))+" د.ع",num(dsum(userOwes,"paid"))+" د.ع",num(drem(userOwes))+" د.ع"],
+        ["المسؤول مدين للمستخدم",num(dsum(adminOwes,"amount"))+" د.ع",num(dsum(adminOwes,"paid"))+" د.ع",num(drem(adminOwes))+" د.ع"],
+        ["الإجمالي",num(debtTotal)+" د.ع",num(debtPaid)+" د.ع",num(debtDue)+" د.ع"]
+        ],"لا توجد ديون مسجلة لهذا الشهر");
+        table([{
+          t:"ت",w:40,a:"c"
+        },{
+          t:"اسم المستخدم",w:190
+        },{
+          t:"اتجاه الدين",w:150
+        },{
+          t:"الدين (د.ع)",w:110,a:"c"
+        },{
+          t:"المسدّد",w:105,a:"c"
+        },{
+          t:"المتبقي",w:119,a:"c"
+        }],monthDebts.map(function(d,i) {
+          return[i+1,d.name,d.dir=="admin_to_user"?"المسؤول مدين":"المستخدم مدين",num(d.amount),num(d.paid),num(Math.max(0,d.amount-d.paid))]
+        }),"لا توجد ديون مسجلة لهذا الشهر");
+        if(!dry)fin();
+        return{
+          out:out,n:cnt
+        }
+      }
+      function makePdf(js) {
+        var enc=new TextEncoder(),parts=[],off=0,xr=[0];
+        function w(d) {
+          if(typeof d=="string")d=enc.encode(d);
+          parts.push(d);
+          off+=d.length
+        }
+        function o(n,b) {
+          xr[n]=off;
+          w(n+" 0 obj\n"+b+"\nendobj\n")
+        }
+        w(new Uint8Array([37,80,68,70,45,49,46,52,10,37,226,227,207,211,10]));
+        var N=js.length,kids=[];
+        for(var i=0;i<N;i++)kids.push((3+3*i)+" 0 R");
+        o(1,"<< /Type /Catalog /Pages 2 0 R >>");
+        o(2,"<< /Type /Pages /Count "+N+" /Kids ["+kids.join(" ")+"] >>");
+        js.forEach(function(j,i) {
+          var p=3+3*i,cs="q 595.28 0 0 841.89 0 0 cm /Im0 Do Q";
+          o(p,"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /XObject << /Im0 "+(p+2)+" 0 R >> >> /Contents "+(p+1)+" 0 R >>");
+          o(p+1,"<< /Length "+cs.length+" >>\nstream\n"+cs+"\nendstream");
+          xr[p+2]=off;
+          w((p+2)+" 0 obj\n<< /Type /XObject /Subtype /Image /Width 1240 /Height 1754 /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length "+j.length+" >>\nstream\n");
+          w(j);
+          w("\nendstream\nendobj\n")
+        });
+        var sx=off,M=3+3*N,x="xref\n0 "+M+"\n0000000000 65535 f \n";
+        for(var k=1;k<M;k++)x+=("0000000000"+xr[k]).slice(-10)+" 00000 n \n";
+        w(x+"trailer\n<< /Size "+M+" /Root 1 0 R >>\nstartxref\n"+sx+"\n%%EOF");
+        return new Blob(parts,{
+          type:"application/pdf"
+        })
+      }
+      function jardPdf(btn) {
+        var old=btn.textContent;
+        btn.disabled=true;
+        btn.textContent="⏳ جاري تجهيز الملف...";
+        fontsReady().then(function() {
+          return new Promise(function(ok) {
+            setTimeout(ok,40)
+          })
+        }).then(function() {
+          var n=jardBuild(0).n,r=jardBuild(n),a=document.createElement("a");
+          a.href=URL.createObjectURL(makePdf(r.out));
+          a.download="جرد_"+S.month.replace(/\s+/g,"_")+".pdf";
+          document.body.appendChild(a);
+          a.click();
+          setTimeout(function() {
+            URL.revokeObjectURL(a.href);
+            a.remove()
+          },4000)
+        })
+        .catch(function(e) {
+          alert("تعذّر إنشاء ملف الجرد، جرّب مرة ثانية")
+        })
+        .then(function() {
+          btn.disabled=false;
+          btn.textContent=old
+        })
+      }
+      function sSet() {
+        var c="";
+        for(var k=1;k<=8;k++)c+='<span class="badge">'+k+' فرد = '+num(k*S.price)+'</span>';
+        return '<div class="two2"><div class="card"><h3>💰 السعر والتوزيع</h3><label>سعر الفرد (دينار عراقي)</label><input data-f="price" type="number" min="0" value="'+S.price+'"><div class="tot"><span class="big" id="pf">'+num(S.price)+'</span> د.ع للفرد</div><label>📅 شهر التوزيع</label><input data-f="month" list="ml" value="'+esc(S.month)+'"><datalist id="ml">'+MON.map(function(m) {
+          return '<option value="'+m+' '+new Date().getFullYear()+'">'
+        }).join("")+'</datalist></div>'+
+        '<div class="card"><h3>🛡️ دخول جميع المسؤولين</h3><label>اسم المستخدم الموحد</label><div class="cred"><b>admin</b></div><label>كلمة المرور الموحدة</label><div class="cred"><b>123456</b></div><p class="mu">جميع المسؤولين يستخدمون بيانات الدخول نفسها، وتظهر لهم قاعدة البيانات المشتركة والتحديثات من بقية الأجهزة.</p></div></div><div class="card"><h3>🧮 أمثلة على الحصص</h3><div class="chips">'+c+'</div></div>'
+      }
+      function vAdmin() {
+        var st=stats(),c={
+          d:sDash,q:sReq,v:sDetail,i:sItems,u:sUsers,n:sNew,o:sOrders,g:sDeleg,k:sStock,r:sReport,s:sSet,a:vAI
+        }
+        [tab]();
+        return '<div class="app"><main class="main"><div class="tb"><div class="adm"><span class="av2">'+esc(S.admin.u.charAt(0).toUpperCase())+'</span><div><b>'+esc(S.admin.u)+'</b><small>مدير الوكيل</small></div></div><div class="act"><span id="cb" class="badge '+(cloud=="ok"&&!unsynced()?"s2":cloud=="err"?"s0":"")+'">'+cs()+'</span>'+thBtn()+'<button class="ib" data-a="nav" data-t="a" title="المساعد الذكي" aria-label="المساعد الذكي">🤖</button><button class="ib" data-a="out" title="خروج" aria-label="خروج">🚪</button></div></div>'+
+        '<div class="mh"><h2>'+TT[tab]+'</h2><span class="mu">📅 '+esc(S.month)+'</span></div>'+c+'</main>'+
+        '<aside class="side"><div class="brand">'+leaf(38)+'<div><b>وكيل الغذاء</b><small>منصة توزيع المواد الغذائية</small></div></div><nav>'+NAV.map(function(n) {
+          var on=n[0]==tab||(tab=="n"&&n[0]=="u")||(tab=="v"&&n[0]=="d"),bg=n[0]=="q"&&PC()?'<em class="cnt">'+PC()+'</em>':'';
+          return '<button class="nv'+(on?' on':'')+'" data-a="nav" data-t="'+n[0]+'"><i>'+n[1]+'</i><span>'+n[2]+'</span>'+bg+'</button>'
+        }).join("")+'</nav><div class="sf">معاً نحو غذاء أفضل '+leaf(20)+'</div></aside></div>'
+      }
+      function render() {
+        var n0=document.querySelector(".side nav"),sl=n0?n0.scrollLeft:0;
+        var gv=me&&me.r=="u"?gate():null;
+        document.getElementById("app").innerHTML=gv||(!me?vLogin():me.r=="a"?vAdmin():vUser());
+        document.title=(me&&me.r=="a"&&PC()?"("+PC()+") ":"")+"وكيل الغذاء";
+        var n=document.querySelector(".side nav");
+        if(n) {
+          n.scrollLeft=sl;
+          var on=n.querySelector(".nv.on");
+          if(on) {
+            var nb=n.getBoundingClientRect(),ob=on.getBoundingClientRect();
+            if(ob.left<nb.left||ob.right>nb.right)n.scrollLeft+=(ob.left+ob.width/2)-(nb.left+nb.width/2)
+          }
+        }
+        sc()
+      }
+      function devName() {
+        var a=navigator.userAgent||"";
+        return(/Android/i.test(a)?"Android":/iPhone|iPad/i.test(a)?"iOS":/Windows/i.test(a)?"Windows":/Mac/i.test(a)?"Mac":"جهاز")+(/Edg/i.test(a)?" · Edge":/Chrome/i.test(a)?" · Chrome":/Firefox/i.test(a)?" · Firefox":/Safari/i.test(a)?" · Safari":"")
+      }
+      function mkReq(f) {
+        var id="r"+Date.now().toString(36)+Math.random().toString(36).slice(2,6),now=Date.now();
+        S.reqs=S.reqs.filter(function(x) {
+          if(x.uid==f.id&&x.st=="p")return false;
+          return x.st=="p"||(x.st=="a"&&now-x.at<15552e6)||(x.st=="r"&&now-x.at<2592e5)
+        }).slice(0,80);
+        S.reqs.unshift({
+          id:id,uid:f.id,name:f.name,at:now,st:"p",dev:devName()
+        });
+        sv();
+        return{
+          r:"u",id:f.id,rq:id
+        }
+      }
+      function gate() {
+        var q0=S.reqs.filter(function(x) {
+          return x.id==me.rq
+        })[0];
+        if(!me.rq||!q0||q0.st=="r") {
+          err=q0&&q0.st=="r"?"تم رفض طلب الدخول من قبل الأدمن":me.rq?"انتهت الجلسة، سجّل الدخول من جديد":"";
+          me=null;
+          ses();
+          return vLogin()
+        }
+        return q0.st=="p"?vWait():null
+      }
+      function vWait() {
+        var u=byId(me.id);
+        return '<div class="lg">'+thBtn(" thf")+'<div class="lw"><div class="lt">'+leaf(78)+'<h1>وكيل الغذاء</h1><i class="ul"></i></div><div class="lc" style="text-align:center"><h2>⏳ بانتظار الموافقة</h2><p class="mu">أهلاً '+esc(u?u.name:"")+'<br>تم إرسال طلب الدخول إلى الأدمن.<br>ستفتح صفحتك تلقائياً بمجرد الموافقة.</p><div class="spin"></div><button class="lb" data-a="out">إلغاء الطلب</button></div><p class="mu" style="margin:14px 0 0;font-size:.72rem">'+cloudTxt()+'</p></div></div>'
+      }
+      function cd(x) {
+        return dig(String(x==null?"":x)).replace(/[^0-9]/g,"")
+      }
+      function doLogin() {
+        var u=g("lu").trim(),p=g("lp").trim();
+        lastU=u;
+        err="";
+        if(u===S.admin.u&&p===S.admin.p)me={
+          r:"a"
+        };
+        else{
+          var nu=nm(u).replace(/\s+/g," "),pc=cd(p),bn=S.users.filter(function(x) {
+            return nm(x.name).replace(/\s+/g," ")===nu
+          }),f=bn.filter(function(x) {
+            return cd(x.p)===pc
+          })[0];
+          if(!bn.length)err=cloud=="wait"?"جاري الاتصال بقاعدة البيانات، حاول بعد لحظات":"الاسم غير مسجل، اكتب الاسم الثلاثي مثل ما هو بالبطاقة";
+          else if(!f)err="الكود غير صحيح، تأكد من الكود الموجود ببطاقتك";
+          else if(cloud!="ok")err=cloud=="wait"?"جاري الاتصال بقاعدة البيانات، حاول بعد لحظات":"لا يوجد اتصال بقاعدة البيانات، تعذّر إرسال طلب الدخول للأدمن";
+          else me=mkReq(f)
+        }
+        if(me) {
+          err="";
+          lastU="";
+          tab="d"
+        }
+        ses();
+        render()
+      }
+      document.addEventListener("click",function(e) {
+        var b=e.target.closest("[data-a]");
+        if(!b)return;
+        var a=b.dataset.a,id=b.dataset.id;
+        if(a=="theme")setTheme(thm()=="dark"?"light":"dark");
+        else if(a=="login")doLogin();
+        else if(a=="eye") {
+          var p=document.getElementById("lp");
+          p.type=p.type=="password"?"text":"password"
+        }
+        else if(a=="out") {
+          if(me&&me.r=="u"&&me.rq) {
+            S.reqs=S.reqs.filter(function(x) {
+              return x.id!=me.rq
+            });
+            sv()
+          }
+          me=null;
+          nw=null;
+          hl=null;
+          err="";
+          CH.length=1;
+          ses();
+          render()
+        }
+        else if(a=="ra"||a=="rj"||a=="rv") {
+          var rq=S.reqs.filter(function(x) {
+            return x.id==id
+          })[0];
+          if(rq) {
+            rq.st=a=="ra"?"a":"r";
+            rq.ok=Date.now();
+            sv();
+            render()
+          }
+        }
+        else if(a=="rc") {
+          S.reqs=S.reqs.filter(function(x) {
+            return x.st!="r"
+          });
+          sv();
+          render()
+        }
+        else if(a=="nav") {
+          tab=b.dataset.t;
+          hl=null;
+          render();
+          window.scrollTo(0,0)
+        }
+        else if(a=="hide") {
+          nw=null;
+          render()
+        }
+        else if(a=="view") {
+          vid=id;
+          tab="v";
+          hl=null;
+          render();
+          window.scrollTo(0,0)
+        }
+        else if(a=="loc") {
+          var u0=me&&me.r=="u"?byId(me.id):null;
+          if(!u0)return;
+          if(!navigator.geolocation) {
+            alert("المتصفح لا يدعم تحديد الموقع");
+            return
+          }
+          var lo=b.textContent;
+          b.disabled=true;
+          b.textContent="⏳ جاري تحديد موقعك بدقة...";
+          navigator.geolocation.getCurrentPosition(function(p) {
+            u0.loc={
+              lat:p.coords.latitude,lng:p.coords.longitude,acc:Math.round(p.coords.accuracy),t:Date.now()
+            };
+            sv();
+            render()
+          },
+          function(er) {
+            b.disabled=false;
+            b.textContent=lo;
+            alert(er.code==1?"تم رفض صلاحية الموقع. فعّلها من إعدادات المتصفح ثم حاول مرة ثانية":"تعذّر تحديد الموقع. تأكد من تشغيل GPS وحاول مرة ثانية")
+          },{
+            enableHighAccuracy:true,timeout:20000,maximumAge:0
+          })
+        }
+        else if(a=="flt") {
+          flt=+b.dataset.v;
+          render()
+        }
+        else if(a=="add") {
+          var n=g("an").trim().replace(/\s+/g," "),ph=g("ah").trim();
+          if(n.split(" ").length<3) {
+            alert("يرجى إدخال الاسم الثلاثي");
+            return
+          }
+          if(ph.length<7) {
+            alert("يرجى إدخال رقم الهاتف");
+            return
+          }
+          var birth="";
+          S.seq++;
+          var u={
+            id:S.seq,name:n,phone:ph,p2:g("ah2").trim(),birth:birth,persons:Math.max(1,parseInt(g("ap"))||1),status:ST[0],p:pw(),at:Date.now(),d:0
+          };
+          S.users.unshift(u);
+          sv();
+          nw=u;
+          hl=u.id;
+          q="";
+          tab="u";
+          render();
+          setTimeout(function() {
+            var h=document.querySelector(".hl");
+            if(h)h.scrollIntoView({
+              behavior:"smooth",block:"center"
+            })
+          },60)
+        }
+        else if(a=="del") {
+          if(confirm("حذف هذا المستخدم؟")) {
+            S.users=S.users.filter(function(x) {
+              return x.id!=id
+            });
+            sv();
+            render()
+          }
+        }
+        else if(a=="cp") {
+          var c=byId(id);
+          if(!c)return;
+          var t="الاسم: "+c.name+"\nرقم الأيدي: "+c.id+"\nالكود: "+c.p;
+          try{
+            navigator.clipboard.writeText(t).then(function() {
+              var o=b.textContent;
+              b.textContent="تم النسخ ✓";
+              setTimeout(function() {
+                b.textContent=o
+              },1500)
+            },function() {
+              alert(t)
+            })
+          } catch(x) {
+            alert(t)
+          }
+        }
+        else if(a=="debtAdd") {
+          var du=byId(id),dm=g("debtMonth").trim(),da=Math.round(Number(g("debtAmount"))),dn=g("debtNote").trim();
+          if(!du)return;
+          if(!dm) {
+            alert("حدد شهر الدين");
+            return
+          }
+          if(!Number.isFinite(da)||da<=0) {
+            alert("أدخل مبلغ دين صحيح");
+            return
+          }
+          if(!Array.isArray(du.debts))du.debts=[];
+          du.debts.unshift({
+            id:"db"+Date.now().toString(36)+Math.random().toString(36).slice(2,5),month:dm,amount:da,paid:0,note:dn,at:Date.now()
+          });
+          sv();
+          render()
+        }
+        else if(a=="debtPay") {
+          var pu=byId(id),pd=pu&&pu.debts.find(function(x) {
+            return x.id==b.dataset.debt
+          });
+          if(!pd)return;
+          var remain=Math.max(0,(+pd.amount||0)-(+pd.paid||0));
+          if(!remain) {
+            alert("هذا الدين مسدد بالكامل");
+            return
+          }
+          var val=prompt("المبلغ المراد تسديده بالدينار العراقي. المتبقي: "+num(remain),String(remain));
+          if(val===null)return;
+          var pay=Math.round(Number(val));
+          if(!Number.isFinite(pay)||pay<=0||pay>remain) {
+            alert("أدخل مبلغاً صحيحاً لا يتجاوز المتبقي");
+            return
+          }
+          pd.paid=(+pd.paid||0)+pay;
+          pd.payments=Array.isArray(pd.payments)?pd.payments:[];
+          pd.payments.push({
+            amount:pay,at:Date.now()
+          });
+          sv();
+          render()
+        }
+        else if(a=="debtDel") {
+          var xu=byId(id);
+          if(xu&&confirm("حذف سجل الدين هذا؟")) {
+            xu.debts=xu.debts.filter(function(x) {
+              return x.id!=b.dataset.debt
+            });
+            sv();
+            render()
+          }
+        }
+        else if(a=="addi") {
+          S.items.push({
+            id:"i"+Date.now().toString(36)+Math.random().toString(36).slice(2,5),at:Date.now(),n:"",q:1,u:"كيلو",s:0
+          });
+          sv();
+          render()
+        }
+        else if(a=="di") {
+          S.items.splice(+b.dataset.k,1);
+          sv();
+          render()
+        }
+        else if(a=="addd") {
+          var dn=g("dnm").trim();
+          if(!dn) {
+            alert("اكتب اسم المندوب");
+            return
+          }
+          S.dseq++;
+          S.deleg.push({
+            id:S.dseq,at:Date.now(),name:dn,phone:g("dph").trim()
+          });
+          sv();
+          render()
+        }
+        else if(a=="delD") {
+          if(confirm("حذف المندوب؟")) {
+            S.deleg=S.deleg.filter(function(d) {
+              return d.id!=id
+            });
+            S.users.forEach(function(u) {
+              if(u.d==id)u.d=0
+            });
+            sv();
+            render()
+          }
+        }
+        else if(a=="csv")csv();
+        else if(a=="pdf")jardPdf(b);
+        else if(a=="prn")window.print();
+        else if(a=="ask") {
+          sendQ(g("qi"))
+        }
+        else if(a=="chip") {
+          sendQ(b.dataset.q)
+        }
+      });
+      document.addEventListener("input",function(e) {
+        var t=e.target;
+        if(t.id=="dq") {
+          dq=t.value;
+          document.getElementById("nt").innerHTML=nRows();
+          return
+        }
+        if(t.id=="pq") {
+          pq=t.value;
+          document.getElementById("pt").innerHTML=pRows();
+          return
+        }
+        if(t.id=="q") {
+          q=t.value;
+          document.getElementById("ul").innerHTML=uCards();
+          return
+        }
+        var f=t.dataset.f;
+        if(!f)return;
+        var k=t.dataset.k;
+        if(f=="in")S.items[k].n=t.value;
+        else if(f=="iq")S.items[k].q=t.value;
+        else if(f=="iu")S.items[k].u=t.value;
+        else if(f=="is")S.items[k].s=t.value;
+        else if(f=="price") {
+          S.price=Math.max(0,parseFloat(t.value)||0);
+          document.getElementById("pf").textContent=num(S.price)
+        }
+        else if(f=="month")S.month=t.value;
+        else if(f=="au")S.admin.u=t.value.trim()||S.admin.u;
+        else if(f=="ap"&&!t.dataset.id)S.admin.p=t.value.trim()||S.admin.p;
+        else if(f=="dn"||f=="dp") {
+          var d=dById(t.dataset.id);
+          if(!d)return;
+          if(f=="dn")d.name=t.value;
+          else d.phone=t.value
+        }
+        else{
+          var u=byId(t.dataset.id);
+          if(!u)return;
+          if(f=="n")u.name=t.value;
+          else if(f=="phone")u.phone=t.value;
+          else if(f=="p2")u.p2=t.value;
+          else if(f=="birth")u.birth=t.value;
+          else if(f=="status")u.status=t.value;
+          else if(f=="dl")u.d=+t.value;
+          else if(f=="persons")u.persons=Math.max(1,parseInt(t.value)||1)
+        }
+        sv()
+      });
+      document.addEventListener("change",function(e) {
+        var f=e.target.dataset.f;
+        if(f=="persons"||f=="price"||f=="status"||f=="birth"||f=="iq"||f=="is"||f=="dl"||f=="in"||f=="iu"||f=="dn")render()
+      });
+      document.addEventListener("keydown",function(e) {
+        if(e.key!="Enter")return;
+        var i=e.target.id;
+        if(i=="lu"||i=="lp")doLogin();
+        else if(i=="qi") {
+          e.preventDefault();
+          sendQ(e.target.value)
+        }
+      });
+      window.addEventListener("storage",function() {
+        S=ld();
+        if(!(me&&me.r=="a"))render()
+      });
+      /* ===== Supabase (مزامنة لحظية + دمج التعديلات) ===== */
+      function fix(d) {
+        d.items=(d.items||[]).map(function(i,k) {
+          if(i.s==null)i.s=0;
+          if(i.u==="كغم")i.u="كيلو";
+          if(i.id==null)i.id="i"+k;
+          if(i.at==null)i.at=0;
+          return i
+        });
+        d.users=(d.users||[]).map(function(u) {
+          if(!u.at)u.at=Date.now();
+          if(u.d==null)u.d=0;
+          if(!Array.isArray(u.debts))u.debts=[];
+          return u
+        });
+        d.deleg=(d.deleg||[]).map(function(x) {
+          if(x.at==null)x.at=0;
+          return x
+        });
+        d.reqs=d.reqs||[];
+        d.dseq=d.dseq||0;
+        d.admin={u:"admin",p:"123456"};
+        d.price=d.price||0;
+        d.month=d.month||"";
+        d.seq=d.seq||1000;
+        return d
+      }
+      var cloud="wait",cloudErr="",pt=null,FBr=false,base=null,inflight=false,dirty=false,REMAP={};
+      function cloudTxt() {
+        return cloud=="ok"?"☁️ متصل بقاعدة البيانات":cloud=="err"?"⚠️ غير متصل ("+cloudErr+")":"⏳ جاري الاتصال..."
+      }
+      function J(x) {
+        return JSON.stringify(x===undefined?null:x)
+      }
+      function CL(x) {
+        return JSON.parse(JSON.stringify(x))
+      }
+      function PC() {
+        return S.reqs.filter(function(x) {
+          return x.st=="p"
+        }).length
+      }
+      function mObj(b,l,r) {
+        var o={},ks={};
+        [b,l,r].forEach(function(x) {
+          if(x)for(var k in x)ks[k]=1
+        });
+        for(var k in ks) {
+          var v=J(l&&l[k])!=J(b&&b[k])?(l?l[k]:undefined):(r?r[k]:undefined);
+          if(v!==undefined)o[k]=v
+        }
+        return o
+      }
+      function mList(b,l,r,rm) {
+        var B={},L={},R={},out=[],mx=0,cl=[];
+        b.forEach(function(x) {
+          B[x.id]=x
+        });
+        l.forEach(function(x) {
+          L[x.id]=x;
+          if(typeof x.id=="number")mx=Math.max(mx,x.id)
+        });
+        r.forEach(function(x) {
+          R[x.id]=x;
+          if(typeof x.id=="number")mx=Math.max(mx,x.id)
+        });
+        r.forEach(function(x) {
+          var bb=B[x.id],ll=L[x.id];
+          if(!ll) {
+            if(!bb)out.push(x);
+            return
+          }
+          if(bb) {
+            out.push(J(ll)==J(bb)?x:mObj(bb,ll,x));
+            return
+          }
+          if((ll.at||0)==(x.at||0))out.push(mObj({},ll,x));
+          else{
+            out.push(x);
+            cl.push(ll)
+          }
+        });
+        cl.forEach(function(ll) {
+          var c=CL(ll);
+          c.id=++mx;
+          if(rm)rm[ll.id]={
+            n:c.id,at:ll.at
+          };
+          out.push(c)
+        });
+        l.forEach(function(ll) {
+          if(!R[ll.id]&&!B[ll.id])out.push(ll)
+        });
+        return out
+      }
+      function mAll(b,l,r) {
+        var o={},rm={};
+        REMAP=rm;
+        ["price","month"].forEach(function(k) {
+          o[k]=J(l[k])!=J(b[k])?l[k]:r[k]
+        });
+        o.admin=mObj(b.admin,l.admin,r.admin);
+        ["users","deleg","items","reqs"].forEach(function(k) {
+          o[k]=mList(b[k]||[],l[k]||[],r[k]||[],k=="users"?rm:null)
+        });
+        o.seq=Math.max(l.seq||0,r.seq||0);
+        o.dseq=Math.max(l.dseq||0,r.dseq||0);
+        o.users.forEach(function(u) {
+          if(u.id>o.seq)o.seq=u.id
+        });
+        o.deleg.forEach(function(x) {
+          if(x.id>o.dseq)o.dseq=x.id
+        });
+        return fix(o)
+      }
+      function remapLocal(rm) {
+        S.users.forEach(function(u) {
+          var m=rm[u.id];
+          if(m&&u.at==m.at)u.id=m.n
+        });
+        if(nw) {
+          var m=rm[nw.id];
+          if(m&&nw.at==m.at) {
+            nw=byId(m.n)||nw;
+            hl=nw.id
+          }
+        }
+      }
+      function snapUI() {
+        var o={
+          v:{},f:null
+        },ae=document.activeElement;
+        document.querySelectorAll("#app input[id],#app select[id]").forEach(function(e) {
+          o.v[e.id]=e.value
+        });
+        if(ae&&/INPUT|SELECT|TEXTAREA/.test(ae.tagName)) {
+          var sel=ae.id?"#"+ae.id:ae.dataset.f&&ae.dataset.id!=null?'[data-f="'+ae.dataset.f+'"][data-id="'+ae.dataset.id+'"]':ae.dataset.f&&ae.dataset.k!=null?'[data-f="'+ae.dataset.f+'"][data-k="'+ae.dataset.k+'"]':null;
+          if(sel) {
+            o.f=sel;
+            try{
+              o.s=ae.selectionStart;
+              o.e=ae.selectionEnd
+            } catch(x){}
+          }
+        }
+        return o
+      }
+      function putUI(o) {
+        for(var id in o.v) {
+          var e=document.getElementById(id);
+          if(e&&e.tagName=="INPUT"&&id!="q"&&id!="dq"&&id!="pq"&&e.value!==o.v[id])e.value=o.v[id]
+        }
+        if(o.f) {
+          var e=document.querySelector(o.f);
+          if(e) {
+            e.focus();
+            try{
+              if(o.s!=null)e.setSelectionRange(o.s,o.e)
+            } catch(x){}
+          }
+        }
+      }
+      function rr() {
+        var sy=window.scrollY,u=snapUI();
+        document.body.classList.add("nr");
+        render();
+        putUI(u);
+        window.scrollTo(0,sy);
+        document.body.classList.remove("nr")
+      }
+      function toast(t) {
+        var e=document.createElement("div");
+        e.className="toast";
+        e.textContent=t;
+        document.body.appendChild(e);
+        setTimeout(function() {
+          e.remove()
+        },5000)
+      }
+      function saveBase() {
+        try{
+          localStorage.setItem(K+"b",JSON.stringify(base))
+        } catch(e){}
+      }
+      function loadBase() {
+        try{
+          var v=localStorage.getItem(K+"b");
+          return v?fix(JSON.parse(v)):null
+        } catch(e) {
+          return null
+        }
+      }
+      function unsynced() {
+        return !!base&&J(S)!=J(base)
+      }
+      function updBadge() {
+        var e=document.getElementById("cb");
+        if(e) {
+          e.textContent=cs();
+          e.className="badge "+(cloud=="ok"&&!unsynced()?"s2":cloud=="err"?"s0":"")
+        }
+      }
+      function applyRemote(rd) {
+        var old=J(S),pb=PC();
+        S=base?mAll(base,S,rd):rd;
+        base=CL(rd);
+        saveBase();
+        var rm=REMAP;
+        if(nw) {
+          var m=rm[nw.id];
+          if(m&&nw.at==m.at) {
+            nw=byId(m.n)||nw;
+            hl=nw.id
+          }
+        }
+        try{
+          localStorage.setItem(K,JSON.stringify(S))
+        } catch(e){}
+        if(window.confirmPendingUserAdd)window.confirmPendingUserAdd(rd);
+        if(J(S)!=old) {
+          if(me&&me.r=="a"&&PC()>pb)toast("🔔 طلب دخول جديد بانتظار موافقتك");
+          rr()
+        }
+      }
+      var wd=null;
+      function flush() {
+        if(!FBr||!window.FB)return;
+        if(inflight) {
+          dirty=true;
+          return
+        }
+        inflight=true;
+        dirty=false;
+        var rm={};
+        clearTimeout(wd);
+        wd=setTimeout(function() {
+          if(inflight) {
+            inflight=false;
+            flush()
+          }
+        },25000);
+        updBadge();
+        window.FB.tx(function(rem) {
+          var r=rem?fix(rem):null;
+          var m=r?mAll(base||CL(r),S,r):S;
+          rm=REMAP;
+          return m
+        })
+        .then(function(res) {
+          clearTimeout(wd);
+          inflight=false;
+          remapLocal(rm);
+          applyRemote(fix(CL(res)));
+          if(cloud!="ok") {
+            cloud="ok";
+            rr()
+          }
+          updBadge();
+          if(window.confirmPendingUserAdd)window.confirmPendingUserAdd(fix(CL(res)));
+          if(dirty)flush()
+        })
+        .catch(function(e) {
+          clearTimeout(wd);
+          inflight=false;
+          fbErr(e);
+          if(window.failPendingUserAdd)window.failPendingUserAdd(e);
+          clearTimeout(pt);
+          pt=setTimeout(flush,4000)
+        })
+      }
+      function fbErr(e) {
+        cloud="err";
+        cloudErr=(e&&e.code)||"خطأ";
+        rr()
+      }
+      function fbInit() {
+        window.FB.sub(function(d,pend) {
+          if(pend)return;
+          var first=!FBr;
+          FBr=true;
+          cloud="ok";
+          if(!d) {
+            inflight=true;
+            window.FB.tx(function(rem) {
+              return rem?fix(rem):S
+            }).then(function(r) {
+              inflight=false;
+              base=CL(r);
+              saveBase();
+              if(window.confirmPendingUserAdd)window.confirmPendingUserAdd(fix(CL(r)));
+              rr()
+            }).catch(function(e) {
+              inflight=false;
+              fbErr(e);
+              if(window.failPendingUserAdd)window.failPendingUserAdd(e)
+            });
+            return
+          }
+          var rd=fix(d);
+          if(first&&!base) {
+            var b0=loadBase();
+            if(b0) {
+              S=mAll(b0,S,rd)
+            } else S=rd;
+            base=CL(rd);
+            saveBase();
+            try{
+              localStorage.setItem(K,JSON.stringify(S))
+            } catch(e){}rr();
+            if(unsynced())setTimeout(flush,50)
+          }
+          else if(!base) {
+            S=rd;
+            base=CL(rd);
+            saveBase();
+            rr()
+          }
+          else applyRemote(rd);
+          if(window.confirmPendingUserAdd)window.confirmPendingUserAdd(rd)
+        },fbErr)
+      }
+      window.addEventListener("fberror",function() {
+        cloud="err";
+        cloudErr="تعذر تحميل المكتبة";
+        rr()
+      });
+      window.addEventListener("online",function() {
+        flush()
+      });
+      render();
+    </script>
+    <script type="module">
+      const SUPABASE_URL = "https://pfglcqwirduoxsgnemda.supabase.co";
+      const SUPABASE_KEY = "sb_publishable_Ecc7tqvBQ5435pdF0YD-oQ_W9cpL946";
+      const API_URL = SUPABASE_URL + "/functions/v1/food-agent-api";
+      const sessionToken = () => localStorage.getItem("foodAgentSession") || "";
+      async function api(action, extra = {}) {
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "apikey": SUPABASE_KEY, "Authorization": "Bearer " + SUPABASE_KEY },
+          body: JSON.stringify({ action, token: sessionToken(), ...extra })
+        });
+        let result = {};
+        try { result = await response.json(); } catch (_) {}
+        if (!response.ok) { const e = new Error(result.error || "supabase_request_failed"); e.status = response.status; throw e; }
+        return result;
+      }
+      let pollTimer = null, lastRevision = -1;
+      window.FB = {
+        login: async (username, password) => {
+          const result = await api("login", { username, password, token: "" });
+          localStorage.setItem("foodAgentSession", result.token); lastRevision = result.revision; return result;
+        },
+        get: async () => { const r = await api("get"); lastRevision = r.revision; return r.data; },
+        getVersioned: async () => { const r = await api("get"); lastRevision = r.revision; return { data: r.data, revision: r.revision }; },
+        txAtRevision: async (snapshot, mutator) => {
+          const next = mutator(snapshot.data);
+          const saved = await api("write", { expected_revision: snapshot.revision, payload: JSON.parse(JSON.stringify(next)) });
+          lastRevision = saved.revision;
+          return saved.data;
+        },
+        tx: async (mutator) => {
+          for (let i=0;i<7;i++) {
+            const snap=await api("get"), next=mutator(snap.data);
+            try { const saved=await api("write",{expected_revision:snap.revision,payload:JSON.parse(JSON.stringify(next))}); lastRevision=saved.revision; return saved.data; }
+            catch(e) { if(e.status!==409 && e.message!=="conflict") throw e; }
+          }
+          throw new Error("تعذر الحفظ بسبب تعديلات متزامنة، أعد المحاولة");
+        },
+        sub: (callback,onError) => {
+          if(pollTimer)clearInterval(pollTimer);
+          let busy=false, firstRead=true;
+          const read=async()=>{
+            if(busy||!sessionToken())return; busy=true;
+            try { const r=await api("get"); if(firstRead||r.revision!==lastRevision){firstRead=false;lastRevision=r.revision;callback(r.data,false);} }
+            catch(e){if(e.status===401){localStorage.removeItem("foodAgentSession");if(pollTimer)clearInterval(pollTimer);pollTimer=null;}if(onError)onError(e);}
+            finally{busy=false;}
+          };
+          read();pollTimer=setInterval(read,3000);
+          return ()=>{if(pollTimer)clearInterval(pollTimer);pollTimer=null;};
+        },
+        importLegacy: async()=>{
+          try {
+            const [{ initializeApp }, { getFirestore, doc, getDocFromServer }] = await Promise.all([
+              import("https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"),
+              import("https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js")
+            ]);
+            const legacyConfig={apiKey:"AIzaSyArLCMpNBOVJ6F6j00tEx5BwEDVuEJXsuk",authDomain:"mlaezem.firebaseapp.com",projectId:"mlaezem",storageBucket:"mlaezem.firebasestorage.app",messagingSenderId:"495856031537",appId:"1:495856031537:web:d6b17b4a3f45330b964210"};
+            const legacyApp=initializeApp(legacyConfig,"food-agent-one-time-import");
+            const db=getFirestore(legacyApp);
+            const snap=await getDocFromServer(doc(db,"wakeel","main"));
+            return snap.exists()?snap.data():null;
+          } catch(e) { console.warn("Legacy import unavailable",e); return null; }
+        },
+        logout: async()=>{try{await api("logout");}catch(_){}localStorage.removeItem("foodAgentSession");if(pollTimer)clearInterval(pollTimer);pollTimer=null;}
+      };
+      window.dispatchEvent(new Event("fbready"));
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script>
+      /* ===== إضافات وكيل الغذاء ===== */
+      var userExtraPage="home", scanStream=null, scanTimer=null, scanDetector=null, userCardLimit=40;
+      var USER_ADD_PENDING_KEY=K+"pending-add", userAddSyncState="", userAddPending=null, userAddError="";
+      var RATION_URL="https://ur.gov.iq/index/show-eservice/51393/10042/cat";
+      var NEWS_URL="https://news.google.com/search?q="+encodeURIComponent("التجارة العراق")+ "&hl=ar&gl=IQ&ceid=IQ%3Aar";
+      var _fixExtra=fix;
+      fix=function(d) {
+        d=_fixExtra(d||{});
+        d.offers=Array.isArray(d.offers)?d.offers:[];
+        d.offers=d.offers.map(function(o) {
+          return Object.assign({
+            active:true,unit:"كيلو",at:0
+          },o)
+        });
+        d.users.forEach(function(u) {
+          (u.debts||[]).forEach(function(x) {
+            if(!x.dir)x.dir="user_to_admin"
+          })
+        });
+        return d
+      };
+      var _mAllExtra=mAll;
+      mAll=function(b,l,r) {
+        var o=_mAllExtra(b||{},l||{},r||{});
+        o.offers=mList((b&&b.offers)||[],(l&&l.offers)||[],(r&&r.offers)||[]);
+        return fix(o)
+      };
+      S=fix(S);
+      if(base)base=fix(base);
+      function savePendingAdd() {
+        try{
+          if(userAddPending)localStorage.setItem(USER_ADD_PENDING_KEY,JSON.stringify(userAddPending));
+          else localStorage.removeItem(USER_ADD_PENDING_KEY)
+        } catch(e){}
+      }
+      function samePendingUser(u,p) {
+        return !!(u&&p&&u.name==p.name&&String(u.p)==String(p.p)&&u.at==p.at)
+      }
+      try{
+        var oldAdd=JSON.parse(localStorage.getItem(USER_ADD_PENDING_KEY)||"null");
+        if(oldAdd) {
+          var oldUser=S.users.filter(function(u) {
+            return samePendingUser(u,oldAdd)
+          })[0];
+          if(oldUser) {
+            userAddPending=oldAdd;
+            userAddSyncState="pending";
+            nw=oldUser;
+            hl=oldUser.id;
+            if(me&&me.r=="a")tab="u"
+          } else localStorage.removeItem(USER_ADD_PENDING_KEY)
+        }
+      } catch(e){}
+      [
+      ["b","📷","ماسح الباركود"],
+      ["h","💳","الديون"],
+      ["x","🛍️","سوق المواد"],
+      ["w","📰","أخبار التجارة"],
+      ["t","🪪","البطاقة التموينية"]
+      ].forEach(function(n) {
+        if(!NAV.some(function(x) {
+          return x[0]==n[0]
+        }))NAV.push(n)
+      });
+      TT.b="ماسح الباركود";
+      TT.h="سجل الديون";
+      TT.x="سوق المواد";
+      TT.w="أخبار التجارة";
+      TT.t="البطاقة التموينية";
+      uCards=function() {
+        var t=nm(q).split(/\s+/).filter(Boolean),r=S.users.filter(function(u) {
+          var h=nm(u.name)+" "+u.id+" "+(u.phone||"")+" "+(u.p2||"");
+          return t.every(function(x) {
+            return h.indexOf(x)>-1
+          })
+        });
+        if(!r.length)return '<p class="mu">لا نتائج مطابقة.</p>';
+        return r.slice(0,userCardLimit).map(uCard).join("")+(r.length>userCardLimit?'<button class="card" style="grid-column:1/-1" data-a="moreUsers">عرض '+Math.min(40,r.length-userCardLimit)+' مستفيدين إضافيين · المتبقي '+(r.length-userCardLimit)+'</button>':'')
+      };
+      function isPendingUser(u) {
+        return samePendingUser(u,userAddPending)&&userAddSyncState!="confirmed"
+      }
+      var _uCardBeforeSync=uCard;
+      uCard=function(u) {
+        var h=_uCardBeforeSync(u);
+        if(isPendingUser(u)) {
+          var old='<div class="cred">🔑 الكود: <b>'+esc(u.p)+'</b> <button data-a="cp" data-id="'+u.id+'" style="padding:2px 10px;margin-inline-start:6px">نسخ</button></div>';
+          h=h.replace(old,'<div class="cred">⏳ بانتظار تأكيد الحفظ على Supabase؛ بيانات الدخول مخفية مؤقتاً</div>')
+        }
+        return h
+      };
+      var _sUsersBeforeSync=sUsers;
+      sUsers=function() {
+        if(userAddPending&&userAddSyncState!="confirmed") {
+          if(!nw)nw=S.users.filter(function(u) {
+            return samePendingUser(u,userAddPending)
+          })[0]||null;
+          var status=userAddSyncState=="error"?'<b>⚠️ لم يتأكد حفظ «'+esc(userAddPending.name)+'» على Supabase</b><p class="mu">'+esc(userAddError||"لن تظهر بيانات الدخول حتى ينجح الحفظ.")+'</p><button class="p" data-a="retryUserSave">إعادة المحاولة</button>':'<b>⏳ جارٍ التحقق من حفظ «'+esc(userAddPending.name)+'» على Supabase</b><p class="mu">لن تظهر بيانات الدخول أو رسالة النجاح إلا بعد تأكيد الحفظ.</p><div class="spin"></div>';
+          return '<div class="card new" style="margin-bottom:12px">'+status+'</div><div class="bar"><input id="q" placeholder="🔍 اسم / أيدي / هاتف" value="'+esc(q)+'"><button class="p" data-a="nav" data-t="n">+ إضافة مستخدم</button></div><div class="grid" id="ul">'+uCards()+'</div>'
+        }
+        return _sUsersBeforeSync()
+      };
+      function xFrame(title,body) {
+        return '<div class="app"><main class="main"><div class="tb"><div class="adm"><span class="av2">'+esc(S.admin.u.charAt(0).toUpperCase())+'</span><div><b>'+esc(S.admin.u)+'</b><small>مدير الوكيل</small></div></div><div class="act"><span id="cb" class="badge">'+cs()+'</span>'+thBtn()+'<button class="ib" data-a="out" title="خروج" aria-label="خروج">🚪</button></div></div><div class="mh"><h2>'+esc(title)+'</h2><span class="mu">📅 '+esc(S.month)+'</span></div>'+body+'</main><aside class="side"><div class="brand">'+leaf(38)+'<div><b>وكيل الغذاء</b><small>منصة توزيع المواد الغذائية</small></div></div><nav>'+NAV.map(function(n) {
+          return '<button class="nv'+(n[0]==tab?' on':'')+'" data-a="nav" data-t="'+n[0]+'"><i>'+n[1]+'</i><span>'+n[2]+'</span>'+(n[0]=="q"&&PC()?'<em class="cnt">'+PC()+'</em>':'')+'</button>'
+        }).join("")+'</nav><div class="sf">معاً نحو غذاء أفضل '+leaf(20)+'</div></aside></div>'
+      }
+      function scanView() {
+        return '<div class="xhero"><h3>📷 ابحث عن المستفيد بسرعة</h3><p class="mu">امسح رمز QR الخاص بالشخص، أو اكتب رقم الأيدي / الاسم. يحتاج تشغيل الكاميرا إلى إذن المتصفح.</p><div class="two"><input id="scanInput" placeholder="WK-1001 أو رقم الأيدي أو الاسم"><button class="p" data-a="scanFind">بحث</button></div><div class="two" style="margin-top:8px"><button class="p" data-a="scanStart">تشغيل الكاميرا</button><button data-a="scanStop">إيقاف الكاميرا</button></div><video id="scanVideo" class="scanner" playsinline muted style="display:none"></video><div id="scanResult" style="margin-top:12px"></div></div><div class="card"><b>رمز كل شخص مشتق من رقم الأيدي</b><p class="mu">افتح بطاقة المستفيد من «المستخدمون» ثم «معلومات كاملة» لعرض وطباعة رمز QR الخاص به.</p></div>'
+      }
+      function debtView() {
+        var rows=[],rec=0,pay=0;
+        S.users.forEach(function(u) {
+          (u.debts||[]).forEach(function(d) {
+            var due=Math.max(0,(+d.amount||0)-(+d.paid||0)),dir=d.dir||"user_to_admin";
+            if(dir=="user_to_admin")rec+=due;
+            else pay+=due;
+            rows.push({
+              u:u,d:d,due:due,dir:dir
+            })
+          })
+        });
+        rows.sort(function(a,b) {
+          return(b.d.at||0)-(a.d.at||0)
+        });
+        return '<div class="stats"><div class="st"><i>📥</i><div><span>المتبقي للمسؤول</span><b>'+num(rec)+' د.ع</b></div></div><div class="st"><i>📤</i><div><span>المتبقي للمستخدمين</span><b>'+num(pay)+' د.ع</b></div></div><div class="st"><i>🧾</i><div><span>سجلات الدين</span><b>'+rows.length+'</b></div></div></div><div class="card"><h3>كل حركات الدين</h3>'+(rows.map(function(x) {
+          return '<div class="it"><div style="flex:1"><b>'+esc(x.u.name)+' · #'+x.u.id+'</b><div class="mu">'+(x.dir=="user_to_admin"?"على المستخدم للمسؤول":"على المسؤول للمستخدم")+' · '+esc(x.d.month||"بدون شهر")+'</div><small>المبلغ '+num(x.d.amount)+' · المسدد '+num(x.d.paid||0)+' · المتبقي '+num(x.due)+' د.ع</small></div><button data-a="extraDetail" data-id="'+x.u.id+'">فتح السجل</button></div>'
+        }).join("")||'<p class="mu">ماكو ديون مسجلة لحد الآن.</p>')+'</div>'
+      }
+      function newsView() {
+        return '<div class="xhero"><h3>📰 آخر أخبار التجارة العراقية</h3><p>لضمان ظهور الأخبار الأحدث، افتح نتائج البحث الحية من المصدر بدلاً من عرض عناوين قديمة داخل التطبيق.</p><a class="wa" style="background:var(--pg);color:var(--prt)" href="'+esc(NEWS_URL)+'" target="_blank" rel="noopener">فتح أحدث الأخبار ↗</a></div><div class="card"><h3>استخدام الأخبار</h3><p class="mu">ستفتح صفحة نتائج باللغة العربية عن التجارة في العراق. راجع تاريخ كل خبر ومصدره قبل الاعتماد عليه.</p></div>'
+      }
+      function rationView() {
+        return '<div class="xhero"><h3>🪪 تطبيق البطاقة التموينية</h3><p>افتح صفحة الخدمة الحكومية للتعرّف على تطبيق البطاقة التموينية وروابط التحميل والخدمات المتاحة.</p><a class="p" style="display:inline-block;text-decoration:none;border-radius:12px;padding:10px 14px" href="'+RATION_URL+'" target="_blank" rel="noopener">فتح خدمة البطاقة التموينية الرسمية ↗</a></div><div class="card"><b>حماية معلومات البطاقة</b><p class="mu">هذا التطبيق يفتح الخدمة الرسمية فقط؛ لا تدخل رقم البطاقة أو بيانات أفراد الأسرة هنا. لا يوجد ربط مباشر بقاعدة بيانات وزارة التجارة.</p></div>'
+      }
+      function marketView() {
+        var u=me&&me.r=="u"?byId(me.id):null,offers=(S.offers||[]).filter(function(o) {
+          return o.active!==false
+        });
+        var seller=u?u.name:S.admin.u,phone=u?(u.phone||""):"";
+        var form='<div class="card" style="margin-bottom:12px"><h3>➕ أضف مادة للبيع</h3><div class="two"><div><label>اسم المادة</label><input id="ofName" placeholder="مثال: رز"></div><div><label>السعر بالدينار</label><input id="ofPrice" type="number" min="0" placeholder="السعر"></div></div><div class="two"><div><label>الكمية</label><input id="ofQty" type="number" min="0.1" step="any" value="1"></div><div><label>الوحدة</label><select id="ofUnit"><option>كيلو</option><option>عدد</option><option>كيس</option><option>كارتون</option><option>لتر</option></select></div></div>'+(u?'':'<div class="two"><div><label>اسم البائع</label><input id="ofSeller" value="'+esc(seller)+'"></div><div><label>رقم واتساب</label><input id="ofPhone" dir="ltr" type="tel" value="'+esc(phone)+'"></div></div>')+'<button class="p" style="width:100%;margin-top:10px" data-a="offerAdd">نشر المادة</button></div>';
+        var list=offers.map(function(o) {
+          var wn=waNum(o.phone),msg=encodeURIComponent("السلام عليكم، أستفسر عن "+o.title+" المعروض للبيع.");
+          var contact=wn?'<a class="wa" href="https://wa.me/'+esc(wn)+'?text='+msg+'" target="_blank" rel="noopener">💬 استفسار واتساب</a>':'<span class="mu">لا يوجد رقم للتواصل</span>';
+          var canDel=me&&me.r=="a"||u&&o.ownerId==u.id;
+          return '<div class="card"><div class="ch"><b>'+pe(o.title)+' '+esc(o.title)+'</b>'+(canDel?'<button class="d" data-a="offerDel" data-id="'+esc(o.id)+'">حذف</button>':'')+'</div><div class="offer-price">'+num(o.price)+' د.ع</div><div class="it"><span>الكمية</span><b>'+esc(o.qty)+' '+esc(o.unit)+'</b></div><div class="mu">البائع: '+esc(o.seller||"")+'</div><p style="margin-bottom:0">'+contact+'</p></div>'
+        }).join("");
+        return '<div class="xhero"><h3>🛍️ سوق المواد</h3><p class="mu">أضف المواد المعروضة للبيع، وتواصل مع البائع مباشرة للاستفسار.</p></div>'+form+'<div class="xgrid">'+(list||'<p class="mu">ماكو مواد معروضة حالياً.</p>')+'</div>'
+      }
+      function xAdmin() {
+        var pages={
+          b:["ماسح الباركود",scanView()],h:["سجل الديون",debtView()],x:["سوق المواد",marketView()],w:["أخبار التجارة",newsView()],t:["البطاقة التموينية",rationView()]
+        };
+        return xFrame(pages[tab][0],pages[tab][1])
+      }
+      var _vAdminExtra=vAdmin;
+      vAdmin=function() {
+        return ["b","h","x","w","t"].indexOf(tab)>=0?xAdmin():_vAdminExtra()
+      };
+      sNew=function() {
+        return '<div class="card" style="max-width:640px"><h3>➕ إضافة مستفيد بسرعة</h3><label>الاسم *</label><input id="an" placeholder="الاسم الكامل"><div class="two"><div><label>📱 الهاتف (اختياري)</label><input id="ah" dir="ltr" type="tel" placeholder="رقم للتواصل"></div><div><label>👨‍👩‍👧 عدد الأفراد</label><input id="ap" type="number" min="1" value="1"></div></div><label>📞 رقم ثانٍ (اختياري)</label><input id="ah2" dir="ltr" type="tel"><p class="mu">ينشأ رقم أيدي ورمز QR تلقائياً. لن تظهر بيانات الدخول إلا بعد تأكيد حفظ المستخدم على Supabase.</p><button class="p" data-a="add" style="width:100%;padding:12px">حفظ المستخدم والتحقق</button></div>'
+      };
+      var _sDetailExtra=sDetail;
+      sDetail=function() {
+        var h=_sDetailExtra(),u=byId(vid);
+        if(!u)return h;
+        var inp='<div class="two"><div><label>الشهر</label><input id="debtMonth" value="'+esc(S.month)+'" placeholder="مثال: تشرين الأول 2026"></div><div><label>اتجاه الدين</label><select id="debtDirection"><option value="user_to_admin">المستخدم مدين لي</option><option value="admin_to_user">أنا مدين للمستخدم</option></select></div></div><div class="two"><div><label>مبلغ الدين (د.ع)</label><input id="debtAmount" type="number" min="1" step="1" placeholder="مثال: 250000"></div><div><label>ملاحظة (اختياري)</label><input id="debtNote" placeholder="سبب الدين أو تفاصيله"></div></div>';
+        var old='<div class="two"><div><label>الشهر</label><input id="debtMonth" value="'+esc(S.month)+'" placeholder="مثال: تشرين الأول 2026"></div><div><label>مبلغ الدين (د.ع)</label><input id="debtAmount" type="number" min="1" step="1" placeholder="مثال: 250000"></div></div><label>ملاحظة (اختياري)</label><input id="debtNote" placeholder="سبب الدين أو تفاصيله">';
+        h=h.replace(old,inp).replace('يمكنك تسجيل تسديد كلي أو جزئي، وكل المبالغ بالدينار العراقي.','اختر منو مدين لمن، ويمكنك تسجيل تسديد كلي أو جزئي. صفحة «سجل الديون» تفصل المبالغ حسب الاتجاه.');
+        var marker='</div></div><div class="two2" style="margin-top:12px">';
+        var at=h.indexOf(marker);
+        if(at>=0) {
+          var qr='<div class="qrbox"><div class="qrcode" data-qrcode="WK-'+u.id+'"></div><div><b>باركود المستفيد</b><div class="mu">رمز سريع للبحث · WK-'+u.id+'</div><button data-a="qrPrint" data-id="'+u.id+'">طباعة البطاقة</button></div></div>';
+          h=h.slice(0,at)+'</div>'+qr+'</div><div class="two2" style="margin-top:12px">'+h.slice(at+marker.length)
+        }
+        if(isPendingUser(u)) {
+          h=h.replace('<div class="it"><span>🔑 الكود</span><b><span dir="ltr">'+esc(u.p)+'</span></b></div>','<div class="it"><span>🔑 الكود</span><b>مخفي حتى تأكيد الحفظ</b></div>');
+          h=h.replace('<button data-a="cp" data-id="'+u.id+'">نسخ بيانات الدخول</button>','<span class="badge">بانتظار تأكيد Supabase</span>')
+        }
+        return h
+      };
+      var _vUserExtra=vUser;
+      vUser=function() {
+        if(!me||me.r!="u") {
+          userExtraPage="home";
+          return _vUserExtra()
+        }
+        if(userExtraPage=="home")return _vUserExtra().replace('<button data-a="out">خروج 🚪</button>','<button data-a="mePage" data-page="menu">الخدمات</button><button data-a="out">خروج 🚪</button>');
+        var u=byId(me.id);
+        if(!u) {
+          userExtraPage="home";
+          return _vUserExtra()
+        }
+        var body=userExtraPage=="menu"?'<div class="xgrid"><button class="card" data-a="mePage" data-page="market">🛍️ سوق المواد والاستفسار</button><button class="card" data-a="mePage" data-page="news">📰 آخر أخبار التجارة</button><button class="card" data-a="mePage" data-page="ration">🪪 تطبيق البطاقة التموينية</button></div>':userExtraPage=="market"?marketView():userExtraPage=="news"?newsView():rationView();
+        return '<div class="wrap"><div class="top"><div class="tl">'+leaf(40)+'<div><h1>وكيل الغذاء</h1><small>'+esc(u.name)+' · الخدمات</small></div></div><div class="act">'+thBtn()+'<button data-a="backUser">رجوع</button><button data-a="out">خروج 🚪</button></div></div>'+body+'</div>'
+      };
+      window.confirmPendingUserAdd=function(remote) {
+        if(!userAddPending||!remote||!Array.isArray(remote.users))return;
+        var found=remote.users.filter(function(u) {
+          return samePendingUser(u,userAddPending)
+        })[0];
+        if(!found)return;
+        var local=byId(found.id);
+        if(!local) {
+          S.users.unshift(found);
+          local=found;
+          try{
+            localStorage.setItem(K,JSON.stringify(S))
+          } catch(e){}
+        }
+        nw=local;
+        hl=local.id;
+        userAddPending=null;
+        userAddSyncState="confirmed";
+        userAddError="";
+        savePendingAdd();
+        toast("✅ تم تأكيد حفظ المستخدم على Supabase");
+        render()
+      };
+      window.failPendingUserAdd=function() {
+        if(!userAddPending)return;
+        userAddSyncState="error";
+        userAddError="تعذّر تأكيد الحفظ الآن. لم تظهر بيانات الدخول، ويمكن إعادة المحاولة بعد التحقق من الاتصال.";
+        render()
+      };
+      var _doLoginBeforeSupabaseCheck=doLogin, loginReadPending=false;
+      doLogin=function() {
+        var userName=g("lu").trim(),passCode=g("lp").trim(),normName=nm(userName).replace(/\s+/g," ");
+        if(userName===S.admin.u&&passCode===S.admin.p)return _doLoginBeforeSupabaseCheck();
+        var exists=S.users.some(function(x) {
+          return nm(x.name).replace(/\s+/g," ")===normName
+        });
+        if(!exists&&cloud!="ok") {
+          lastU=userName;
+          err=cloud=="err"?"تعذّر الاتصال بقاعدة Supabase؛ لم يتم التأكد من وجود الاسم. تحقق من الاتصال ثم أعد المحاولة.":"جارٍ تحميل بيانات Supabase، انتظر لحظات ثم أعد المحاولة.";
+          render();
+          return
+        }
+        if(!exists&&window.FB&&window.FB.get&&!loginReadPending) {
+          loginReadPending=true;
+          lastU=userName;
+          err="جارٍ التحقق من الاسم مباشرةً من Supabase...";
+          render();
+          window.FB.get().then(function(remote) {
+            loginReadPending=false;
+            if(remote)applyRemote(fix(remote));
+            var found=S.users.some(function(x) {
+              return nm(x.name).replace(/\s+/g," ")===normName
+            });
+            if(!found) {
+              lastU=userName;
+              err="الاسم غير موجود في بيانات Supabase. تأكد من الاسم الذي أُرسل لك.";
+              render();
+              return
+            }
+            var un=document.getElementById("lu"),pwEl=document.getElementById("lp");
+            if(un)un.value=userName;
+            if(pwEl)pwEl.value=passCode;
+            _doLoginBeforeSupabaseCheck()
+          }).catch(function() {
+            loginReadPending=false;
+            lastU=userName;
+            err="تعذّر التحقق من Supabase الآن. تأكد من الإنترنت ثم أعد المحاولة.";
+            render()
+          });
+          return
+        }
+        return _doLoginBeforeSupabaseCheck()
+      };
+      function paintQrs() {
+        if(!window.QRCode)return;
+        document.querySelectorAll("[data-qrcode]").forEach(function(el) {
+          if(el.dataset.painted)return;
+          el.dataset.painted="1";
+          try{
+            new QRCode(el,{
+              text:el.dataset.qrcode,width:136,height:136,colorDark:"#092012",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.M
+            })
+          } catch(e) {
+            el.textContent=el.dataset.qrcode
+          }
+        })
+      }
+      function stopScan() {
+        if(scanTimer) {
+          clearTimeout(scanTimer);
+          scanTimer=null
+        }
+        if(scanStream) {
+          scanStream.getTracks().forEach(function(t) {
+            t.stop()
+          });
+          scanStream=null
+        }
+        scanDetector=null
+      }
+      function findPerson(code) {
+        var c=dig(String(code||"").trim()),m=c.match(/\d+/),u=m?byId(m[0]):null;
+        if(!u) {
+          var nn=nm(c);
+          u=S.users.filter(function(x) {
+            return nm(x.name)==nn
+          })[0]
+        }
+        return u
+      }
+      function openScannedPerson(u) {
+        if(!u)return;
+        stopScan();
+        vid=u.id;
+        tab="v";
+        userExtraPage="home";
+        render();
+        window.scrollTo(0,0)
+      }
+      function showScanResult(u,raw) {
+        var box=document.getElementById("scanResult");
+        if(!box)return;
+        if(!u) {
+          box.innerHTML='<div class="card"><b>ما لكيت مستفيد مطابق</b><p class="mu">تأكد من الرمز أو جرّب رقم الأيدي / الاسم.</p></div>';
+          return
+        }
+        box.innerHTML='<div class="card"><div class="ch"><b>✅ '+esc(u.name)+'</b><span class="id">#'+u.id+'</span></div><div class="it"><span>الأفراد</span><b>'+u.persons+'</b></div><div class="it"><span>الحالة</span><b>'+esc(u.status)+'</b></div><button class="p" data-a="extraDetail" data-id="'+u.id+'">فتح ملف المستفيد</button></div>'
+      }
+      async function startScan() {
+        var v=document.getElementById("scanVideo");
+        if(!v)return;
+        if(!("BarcodeDetector" in window)) {
+          alert("المتصفح لا يدعم مسح QR. أدخل رقم الأيدي يدوياً.");
+          return
+        }
+        if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia) {
+          alert("الكاميرا تحتاج إلى اتصال آمن HTTPS.");
+          return
+        }
+        try{
+          var fm=await BarcodeDetector.getSupportedFormats(),formats=fm.indexOf("qr_code")>=0?["qr_code"]:fm;
+          scanDetector=new BarcodeDetector({
+            formats:formats
+          });
+          scanStream=await navigator.mediaDevices.getUserMedia({
+            video:{
+              facingMode:{
+                ideal:"environment"
+              }
+            },audio:false
+          });
+          v.srcObject=scanStream;
+          v.style.display="block";
+          await v.play();
+          var loop=async function() {
+            if(!scanStream||!scanDetector)return;
+            try{
+              var codes=await scanDetector.detect(v);
+              if(codes&&codes.length) {
+                var raw=codes[0].rawValue,found=findPerson(raw);
+                if(found) {
+                  openScannedPerson(found);
+                  return
+                }
+                var input=document.getElementById("scanInput");
+                if(input)input.value=raw;
+                showScanResult(null,raw);
+                stopScan();
+                return
+              }
+            } catch(e){}
+            scanTimer=setTimeout(loop,250)
+          };
+          loop()
+        } catch(e) {
+          stopScan();
+          alert("تعذّر تشغيل الكاميرا. امنح المتصفح الإذن أو استخدم البحث اليدوي.")
+        }
+      }
+      var _renderExtra=render;
+      render=function() {
+        stopScan();
+        _renderExtra();
+        paintQrs()
+      };
+      document.addEventListener("click",async function(ev) {
+        var b=ev.target.closest("[data-a]");
+        if(!b)return;
+        var a=b.dataset.a,id=b.dataset.id;
+        if(["add","debtAdd","scanStart","scanStop","scanFind","extraDetail","mePage","backUser","offerAdd","offerDel","qrPrint","moreUsers","retryUserSave"].indexOf(a)<0)return;
+        ev.preventDefault();
+        ev.stopImmediatePropagation();
+        if(a=="add") {
+          if(userAddPending) {
+            alert("توجد إضافة بانتظار تأكيد Supabase. أكملها أو أعد المحاولة أولاً.");
+            return
+          }
+          var n=g("an").trim().replace(/\s+/g," "),ph=g("ah").trim();
+          if(!n) {
+            alert("اكتب اسم المستفيد");
+            return
+          }
+          if(!window.FB||!window.FB.get||!window.FB.tx) {
+            cloud="err";cloudErr="خدمة قاعدة البيانات لم تجهز";render();
+            alert("خدمة قاعدة البيانات لم تجهز. حدّث الصفحة وتأكد من اتصال الإنترنت.");
+            return
+          }
+          /* فحص مباشر للسيرفر قبل الإضافة، بدلاً من الاعتماد على علامة اتصال قديمة */
+          var liveSnapshot;
+          try {
+            liveSnapshot=await window.FB.getVersioned();
+            var liveData=liveSnapshot.data;
+            if(liveData)applyRemote(fix(liveData));
+            FBr=true;cloud="ok";cloudErr="";updBadge();
+          } catch(connErr) {
+            cloud="err";cloudErr=(connErr&&connErr.message)||"فشل الاتصال";updBadge();render();
+            alert("تعذّر الوصول إلى قاعدة البيانات الآن: "+cloudErr+". لم تتم إضافة المستخدم. أعد المحاولة بعد رجوع الاتصال.");
+            return
+          }
+          S.seq++;
+          var u={
+            id:S.seq,name:n,phone:ph,p2:g("ah2").trim(),birth:"",persons:Math.max(1,parseInt(g("ap"))||1),status:ST[0],p:pw(),at:Date.now(),d:0,debts:[]
+          };
+          S.users.unshift(u);
+          nw=u;
+          hl=u.id;
+          userAddPending={
+            id:u.id,name:u.name,p:u.p,at:u.at
+          };
+          userAddSyncState="pending";
+          userAddError="";
+          savePendingAdd();
+          q="";
+          userCardLimit=40;
+          tab="u";
+          userExtraPage="home";
+          try{localStorage.setItem(K,JSON.stringify(S));}catch(e){}
+          render();
+          clearTimeout(pt);
+          /* استخدم نتيجة فحص الاتصال نفسها للحفظ دون قراءة ثانية */
+          try {
+            var savedAdd=await window.FB.txAtRevision(liveSnapshot,function(remote){
+              return mAll(base||CL(remote),S,remote);
+            });
+            applyRemote(fix(CL(savedAdd)));
+            cloud="ok";cloudErr="";
+            if(window.confirmPendingUserAdd)window.confirmPendingUserAdd(fix(CL(savedAdd)));
+            updBadge();
+          } catch(saveErr) {
+            if(saveErr&&saveErr.status===409) flush();
+            else {
+              fbErr(saveErr);
+              if(window.failPendingUserAdd)window.failPendingUserAdd(saveErr);
+            }
+          }
+          return
+        }
+        if(a=="moreUsers") {
+          userCardLimit+=40;
+          render();
+          return
+        }
+        if(a=="retryUserSave") {
+          if(!userAddPending)return;
+          if(!FBr||!window.FB||!window.FB.tx) {
+            userAddSyncState="error";
+            userAddError="لا يوجد اتصال بقاعدة Supabase. انتظر عودة الاتصال ثم أعد المحاولة.";
+            render();
+            return
+          }
+          userAddSyncState="pending";
+          userAddError="";
+          render();
+          clearTimeout(pt);
+          flush();
+          return
+        }
+        if(a=="debtAdd") {
+          var du=byId(id),dm=g("debtMonth").trim(),da=Math.round(Number(g("debtAmount"))),dn=g("debtNote").trim(),dir=g("debtDirection")||"user_to_admin";
+          if(!du)return;
+          if(!dm) {
+            alert("حدد شهر الدين");
+            return
+          }
+          if(!Number.isFinite(da)||da<=0) {
+            alert("أدخل مبلغ دين صحيح");
+            return
+          }
+          if(!Array.isArray(du.debts))du.debts=[];
+          du.debts.unshift({
+            id:"db"+Date.now().toString(36)+Math.random().toString(36).slice(2,5),month:dm,amount:da,paid:0,note:(dir=="user_to_admin"?"على المستخدم · ":"على المسؤول · ")+dn,dir:dir,at:Date.now()
+          });
+          sv();
+          render();
+          return
+        }
+        if(a=="scanStart") {
+          startScan();
+          return
+        }
+        if(a=="scanStop") {
+          stopScan();
+          var v=document.getElementById("scanVideo");
+          if(v)v.style.display="none";
+          return
+        }
+        if(a=="scanFind") {
+          var found=findPerson(g("scanInput"));
+          if(found)openScannedPerson(found);
+          else showScanResult(null,g("scanInput"));
+          return
+        }
+        if(a=="extraDetail") {
+          vid=id;
+          tab="v";
+          userExtraPage="home";
+          render();
+          window.scrollTo(0,0);
+          return
+        }
+        if(a=="mePage") {
+          userExtraPage=b.dataset.page||"menu";
+          render();
+          window.scrollTo(0,0);
+          return
+        }
+        if(a=="backUser") {
+          userExtraPage="home";
+          render();
+          window.scrollTo(0,0);
+          return
+        }
+        if(a=="offerAdd") {
+          var title=g("ofName").trim(),price=Math.round(Number(g("ofPrice"))),qty=Number(g("ofQty")),seller=me&&me.r=="u"?byId(me.id).name:g("ofSeller").trim(),phone=me&&me.r=="u"?(byId(me.id).phone||""):g("ofPhone").trim();
+          if(!title) {
+            alert("اكتب اسم المادة");
+            return
+          }
+          if(!Number.isFinite(price)||price<0) {
+            alert("أدخل سعراً صحيحاً");
+            return
+          }
+          if(!Number.isFinite(qty)||qty<=0) {
+            alert("أدخل كمية صحيحة");
+            return
+          }
+          S.offers.unshift({
+            id:"of"+Date.now().toString(36)+Math.random().toString(36).slice(2,5),title:title,price:price,qty:qty,unit:g("ofUnit")||"كيلو",seller:seller,phone:phone,ownerId:me&&me.r=="u"?me.id:0,active:true,at:Date.now()
+          });
+          sv();
+          render();
+          return
+        }
+        if(a=="offerDel") {
+          var of=(S.offers||[]).filter(function(x) {
+            return x.id==id
+          })[0];
+          if(!of)return;
+          if(me&&me.r!="a"&&of.ownerId!=me.id)return;
+          if(confirm("حذف عرض البيع؟")) {
+            S.offers=S.offers.filter(function(x) {
+              return x.id!=id
+            });
+            sv();
+            render()
+          }
+          return
+        }
+        if(a=="qrPrint") {
+          var u0=byId(id);
+          if(!u0)return;
+          var el=document.querySelector('[data-qrcode="WK-'+id+'"]'),im=el&&el.querySelector("img"),cn=el&&el.querySelector("canvas"),src=im?im.src:cn?cn.toDataURL("image/png"):"";
+          var w=window.open("","_blank","width=380,height=500");
+          if(!w) {
+            alert("اسمح بفتح نافذة الطباعة من المتصفح");
+            return
+          }
+          w.document.write('<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><title>بطاقة المستفيد</title><style>body{font-family:Arial,Tahoma,sans-serif;text-align:center;padding:28px;color:#10261a}.box{border:2px solid #15803d;border-radius:18px;padding:20px;max-width:300px;margin:auto}img{width:190px;height:190px}h2{margin:8px 0}p{color:#52685a}</style><div class="box"><h2>'+esc(u0.name)+'</h2><p>رقم الأيدي #'+u0.id+'</p>'+(src?'<img src="'+src+'" alt="QR">':'<p>WK-'+u0.id+'</p>')+'<p>وكيل الغذاء</p></div></html>');
+          w.document.close();
+          setTimeout(function() {
+            w.focus();
+            w.print()
+          },400);
+          return
+        }
+      },true);
+      document.addEventListener("input",function(ev) {
+        if(ev.target&&ev.target.id=="q")userCardLimit=40
+      },true);
+      document.addEventListener("keydown",function(ev) {
+        if(ev.key=="Enter"&&ev.target.id=="scanInput") {
+          ev.preventDefault();
+          var found=findPerson(ev.target.value);
+          if(found)openScannedPerson(found);
+          else showScanResult(null,ev.target.value)
+        }
+      });
+      if(me&&me.r=="u")userExtraPage="home";
+      render();
+    </script>
+  
+    <script>
+(function(){
+  /* 1) حدث "storage" كان يستبدل البيانات الحية بنسخة قديمة من localStorage
+        (عند فتح تبويب/جهاز ثاني)، فيضيع التحديث. الآن ترجع البيانات الحالية. */
+  ld=function(){return S};
+
+  /* بيانات دخول موحدة وثابتة لجميع المسؤولين على كل الأجهزة. */
+  var _f=fix;
+  fix=function(d){
+    d=_f(d||{});
+    d.admin={u:"admin",p:"123456"};
+    return d;
+  };
+  D0.admin.p="123456";
+  S=fix(S);
+  if(base)base=fix(base);
+
+  /* 3) كل جهاز يرجع يشتغل بالاتصال المباشر عند العودة للتطبيق أو رجوع الإنترنت */
+  document.addEventListener("visibilitychange",function(){
+    if(!document.hidden&&typeof flush=="function")flush();
+  });
+})();
+</script>
+    <script>
+/* ===== إصلاح: التأكد الفعلي من حفظ كل مستخدم جديد على Supabase ===== */
+(function(){
+  /* 1) سبب اختفاء المستخدمين: حدث "storage" كان يستبدل البيانات الحية بنسخة قديمة من localStorage
+        (تبويب ثانٍ / نافذة قديمة)، وبعدها أي حفظ يحذف المستخدمين من Supabase.
+        الحل: ld() ترجع البيانات الحالية بدل قراءة نسخة قديمة. (التحميل الأول تم قبل هذا السطر ولا يتأثر) */
+  ld=function(){return S};
+
+  var _origConfirm=window.confirmPendingUserAdd,verifying=false,full=null;
+
+  /* نحتفظ بنسخة كاملة من المستخدم المعلّق (حتى لو اختفى مؤقتاً من البيانات المحلية) */
+  var _sp=savePendingAdd;
+  savePendingAdd=function(){
+    if(userAddPending){
+      var m=S.users.filter(function(x){return samePendingUser(x,userAddPending)})[0];
+      if(m)full=CL(m);
+    } else full=null;
+    _sp();
+  };
+
+  function hasPending(d,p){
+    return !!(d&&Array.isArray(d.users)&&d.users.some(function(u){return samePendingUser(u,p)}));
+  }
+  function fail(msg){
+    verifying=false;
+    if(!userAddPending)return;
+    userAddSyncState="error";
+    userAddError=msg||"لم يتأكد حفظ المستخدم على Supabase. لن تظهر بيانات الدخول إلا بعد التأكد.";
+    render();
+  }
+
+  /* كتابة المستخدم المعلّق مباشرة على السيرفر: تضيف هذا المستخدم فقط وتترك باقي البيانات كما هي */
+  function ensureOnServer(p){
+    var mine=S.users.filter(function(x){return samePendingUser(x,p)})[0]||full;
+    if(!mine)return Promise.reject(new Error("local-missing"));
+    var finalId=mine.id;
+    return window.FB.tx(function(rem){
+      var r=fix(rem?CL(rem):CL(S));
+      if(!r.users.some(function(x){return samePendingUser(x,p)})){
+        var c=CL(mine);
+        if(r.users.some(function(x){return x.id==c.id})){
+          c.id=Math.max.apply(null,r.users.map(function(x){return +x.id||0}).concat([+r.seq||0,1000]))+1;
+        }
+        r.users.unshift(c);
+        r.seq=Math.max(+r.seq||0,+c.id||0);
+        finalId=c.id;
+      } else {
+        finalId=r.users.filter(function(x){return samePendingUser(x,p)})[0].id;
+      }
+      return r;
+    }).then(function(){
+      var loc=S.users.filter(function(x){return samePendingUser(x,p)})[0];
+      if(!loc){loc=CL(mine);S.users.unshift(loc)}
+      if(loc.id!=finalId){loc.id=finalId;if(nw&&samePendingUser(nw,p))hl=finalId}
+      if(S.seq<finalId)S.seq=finalId;
+      try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}
+    });
+  }
+
+  /* قراءة مباشرة من السيرفر؛ إن لم يكن المستخدم موجوداً يُكتب ثم يُقرأ مرة ثانية */
+  function verify(){
+    var p=userAddPending;
+    if(!p||verifying)return;
+    if(!window.FB||!window.FB.get||!window.FB.tx)return fail("لا يوجد اتصال بقاعدة Supabase.");
+    verifying=true;
+    window.FB.get().then(function(srv){
+      if(hasPending(srv,p))return srv;
+      return ensureOnServer(p).then(function(){return window.FB.get()}).then(function(srv2){
+        return hasPending(srv2,p)?srv2:null;
+      });
+    }).then(function(srv){
+      verifying=false;
+      if(userAddPending!==p)return;
+      if(srv&&_origConfirm)_origConfirm(fix(CL(srv)));
+      else fail();
+    }).catch(function(e){
+      fail(e&&e.message=="local-missing"?"لم يُعثر على المستخدم محلياً، أعد إضافته.":null);
+    });
+  }
+
+  /* يُستدعى من الكود الأصلي بعد أي حفظ/لقطة: لا نثق بالبيانات الممررة، نقرأ من السيرفر بأنفسنا */
+  window.confirmPendingUserAdd=function(remote){
+    if(!userAddPending||!remote)return;
+    if(hasPending(remote,userAddPending))verify();
+  };
+  /* فشل الحفظ العادي: نجرب الكتابة المباشرة قبل إظهار الخطأ */
+  window.failPendingUserAdd=function(){
+    if(userAddPending)verify();
+  };
+
+  /* حارس: إذا بقيت الإضافة معلّقة أكثر من 6 ثوانٍ (أو ضغط «إعادة المحاولة») نتحقق ونكتب مباشرة */
+  setInterval(function(){
+    if(userAddPending&&!verifying&&Date.now()-userAddPending.at>6000)verify();
+  },1500);
+})();
+</script>
+      <script>
+(function(){
+  /* ============ التصميم الجديد ============ */
+  var CSS=`
+.uc{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--bd);border-radius:20px;padding:14px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:10px;min-width:0}
+.uc.hl{border-color:var(--pr);animation:pl 1.6s 2}
+.uc-h{display:flex;gap:12px;align-items:center}
+.uc-av{width:52px;height:52px;border-radius:16px;background:var(--pg2);color:var(--prt);display:grid;place-items:center;font-size:1.5rem;font-weight:800;flex:none}
+.uc-t{min-width:0;flex:1}
+.uc-t b{display:block;font-size:1.05rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.uc-m{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px;align-items:center}
+.uc-st{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.uc-st>div{background:var(--in);border-radius:14px;padding:8px 6px;text-align:center;min-width:0}
+.uc-st span{font-size:1.1rem}
+.uc-st b{display:block;font-size:.95rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.uc-st small{color:var(--mu);font-size:.7rem}
+.uc-r{color:var(--mu);font-size:.88rem}
+.uc .cred{margin-top:0}
+.uc-act{display:flex;flex-wrap:wrap;gap:6px}
+.uc-ed{border-top:1px dashed var(--bd);padding-top:6px}
+.uc-ed summary{cursor:pointer;font-weight:700;color:var(--pr);padding:8px 0;list-style:none}
+.uc-ed summary::-webkit-details-marker{display:none}
+textarea{font:inherit;width:100%;padding:9px 11px;border:1px solid var(--bd);border-radius:12px;background:var(--in);color:var(--tx);resize:vertical}
+textarea:focus{outline:2px solid rgba(34,197,94,.45)}
+.nwc{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--bd);border-radius:16px;padding:14px;margin-bottom:10px;box-shadow:var(--sh)}
+.nwt{font-weight:700;line-height:1.7}
+.nwm{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.svc{display:flex;align-items:center;gap:12px;text-align:right;font-size:1rem}
+.svc span{font-size:1.6rem}
+.mb{background:var(--in);border-radius:14px;padding:10px 12px;margin-bottom:8px;line-height:1.7}
+.mb .rep,.msg .rep{background:var(--ac);color:var(--pr);border-radius:12px;padding:8px 10px;margin-top:8px;font-weight:600}
+.msg.un{border:2px solid var(--pr)}
+.msg .mt{margin:8px 0}
+`;
+  var st=document.createElement('style');st.textContent=CSS;document.head.appendChild(st);
+
+  /* ============ بيانات الرسائل (متزامنة مع Supabase) ============ */
+  var _f3=fix;
+  fix=function(d){d=_f3(d);d.msgs=Array.isArray(d.msgs)?d.msgs:[];return d};
+  var _m3=mAll;
+  mAll=function(b,l,r){var o=_m3(b,l,r);o.msgs=mList((b&&b.msgs)||[],(l&&l.msgs)||[],(r&&r.msgs)||[]);return fix(o)};
+  S=fix(S);if(base)base=fix(base);
+  function MC(){return(S.msgs||[]).filter(function(m){return !m.read}).length}
+  var msgDraft='',openCards={};
+
+  /* ============ 1) إصلاح الخطأ بأول محاولة دخول ============ */
+  var _dl3=doLogin,lwait=null;
+  doLogin=function(){
+    if(lwait)return;
+    if(cloud!=='wait')return _dl3();
+    var u=g('lu').trim(),p=g('lp').trim(),t0=Date.now();
+    lastU=u;err='⏳ جارٍ الاتصال بقاعدة البيانات... سيتم تسجيل دخولك تلقائياً';
+    render();
+    var a0=document.getElementById('lu'),b0=document.getElementById('lp');if(a0)a0.value=u;if(b0)b0.value=p;
+    lwait=setInterval(function(){
+      if(cloud==='wait'&&Date.now()-t0<25000)return;
+      clearInterval(lwait);lwait=null;
+      if(me)return;
+      if(cloud==='wait'){err='تعذّر الاتصال بقاعدة البيانات، تأكد من الإنترنت وأعد المحاولة';render();return}
+      err='';
+      var a=document.getElementById('lu'),b=document.getElementById('lp');
+      if(!a||!b)return;
+      a.value=u;b.value=p;
+      _dl3();
+    },150);
+  };
+
+  /* ============ 2) صفحة المستخدمين: بطاقات مرتبة ============ */
+  document.addEventListener('toggle',function(e){var t=e.target;if(t&&t.classList&&t.classList.contains('uc-ed'))openCards[t.dataset.uid]=t.open},true);
+  uCard=function(u){
+    var a=age(u.birth),dl=dById(u.d),pend=isPendingUser(u),si=ST.indexOf(u.status);
+    return '<div class="uc'+(hl==u.id?' hl':'')+'">'+
+      '<div class="uc-h"><div class="uc-av">'+esc((u.name||'?').charAt(0))+'</div><div class="uc-t"><b>'+esc(u.name)+'</b><div class="uc-m"><span class="id">#'+u.id+'</span><span class="badge s'+si+'">'+esc(u.status)+'</span>'+(u.loc?'<span class="badge">📍 موقع</span>':'')+'</div></div></div>'+
+      '<div class="uc-st"><div><span>👨‍👩‍👧</span><b>'+u.persons+'</b><small>أفراد</small></div><div><span>💰</span><b>'+num(u.persons*S.price)+'</b><small>دينار</small></div><div><span>🚚</span><b>'+esc(dl?dl.name:'—')+'</b><small>المندوب</small></div></div>'+
+      '<div class="uc-r">📱 <span dir="ltr">'+esc(u.phone||'—')+'</span>'+(u.p2?' · 📞 <span dir="ltr">'+esc(u.p2)+'</span>':'')+(u.at?' · 📅 '+dt(u.at):'')+'</div>'+
+      (pend?'<div class="cred">⏳ بانتظار تأكيد الحفظ على Supabase؛ بيانات الدخول مخفية مؤقتاً</div>':'<div class="cred">🔑 الكود: <b>'+esc(u.p)+'</b> <button data-a="cp" data-id="'+u.id+'" style="padding:2px 10px;margin-inline-start:6px">نسخ</button></div>')+
+      '<div class="two">'+stSel(u)+dlSel(u)+'</div>'+
+      '<div class="uc-act">'+waBtn(u,u.phone,'واتساب')+mpBtn(u)+'<button data-a="view" data-id="'+u.id+'">📄 الملف الكامل</button></div>'+
+      '<details class="uc-ed" data-uid="'+u.id+'"'+(openCards[u.id]?' open':'')+'><summary>✏️ تعديل البيانات</summary>'+
+        '<label>الاسم</label><input data-f="n" data-id="'+u.id+'" value="'+esc(u.name)+'">'+
+        '<div class="two"><div><label>📱 الهاتف</label><input dir="ltr" data-f="phone" data-id="'+u.id+'" value="'+esc(u.phone)+'"></div><div><label>📞 رقم ثاني</label><input dir="ltr" data-f="p2" data-id="'+u.id+'" value="'+esc(u.p2)+'"></div></div>'+
+        '<div class="two"><div><label>🎂 المولد'+(a!==''?' ('+a+' سنة)':'')+'</label><input type="date" data-f="birth" data-id="'+u.id+'" value="'+esc(u.birth)+'"></div><div><label>👨‍👩‍👧 الأفراد</label><input type="number" min="1" data-f="persons" data-id="'+u.id+'" value="'+u.persons+'"></div></div>'+
+        '<button class="d" data-a="del" data-id="'+u.id+'" style="width:100%;margin-top:10px">🗑️ حذف المستخدم</button>'+
+      '</details></div>'
+  };
+  var _sU=sUsers;
+  sUsers=function(){
+    var tp=S.users.reduce(function(a,u){return a+u.persons},0);
+    return '<div class="stats"><div class="st"><i>👥</i><div><span>المستفيدون</span><b>'+S.users.length+'</b></div></div><div class="st"><i>👨‍👩‍👧</i><div><span>إجمالي الأفراد</span><b>'+tp+'</b></div></div><div class="st"><i>💰</i><div><span>المبلغ الكلي</span><b style="font-size:1.05rem">'+num(tp*S.price)+'</b><small>دينار عراقي</small></div></div></div>'+_sU()
+  };
+
+  /* ============ 3) الأخبار داخل التطبيق (بدون روابط) ============ */
+  var NEWS={items:[],at:0,st:'idle',last:0},newsBusy=false;
+  try{var nc=JSON.parse(localStorage.getItem('mb2news')||'null');if(nc&&nc.items){NEWS.items=nc.items;NEWS.at=nc.at||0}}catch(e){}
+  var NQ=['وزارة التجارة العراقية','البطاقة التموينية العراق','الأمن الغذائي العراق'];
+  function feed(q){return 'https://news.google.com/rss/search?q='+encodeURIComponent(q+' when:14d')+'&hl=ar&gl=IQ&ceid=IQ:ar'}
+  function splitT(t){t=String(t||'').replace(/\s+/g,' ').trim();var i=t.lastIndexOf(' - ');return i>8?{t:t.slice(0,i),s:t.slice(i+3)}:{t:t,s:''}}
+  function viaJson(q){
+    return fetch('https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(feed(q))).then(function(r){return r.json()}).then(function(j){
+      if(!j||j.status!=='ok'||!j.items||!j.items.length)throw new Error('bad');
+      return j.items.map(function(i){var p=splitT(i.title),d=Date.parse(String(i.pubDate||'').replace(' ','T')+'Z');return{t:p.t,s:p.s||i.author||'',d:isNaN(d)?0:d}})
+    })
+  }
+  function viaXml(url){
+    return fetch(url).then(function(r){return r.text()}).then(function(x){
+      var doc=new DOMParser().parseFromString(x,'text/xml'),its=doc.querySelectorAll('item');
+      if(!its.length)throw new Error('empty');
+      return Array.prototype.map.call(its,function(it){
+        var g1=function(n){var e=it.querySelector(n);return e?e.textContent:''},p=splitT(g1('title')),d=Date.parse(g1('pubDate'));
+        return{t:p.t,s:g1('source')||p.s,d:isNaN(d)?0:d}
+      })
+    })
+  }
+  function getFeed(q){
+    var f=feed(q);
+    return viaJson(q).catch(function(){return viaXml('https://api.allorigins.win/raw?url='+encodeURIComponent(f))}).catch(function(){return viaXml('https://corsproxy.io/?url='+encodeURIComponent(f))})
+  }
+  function ago(t){
+    var s=(Date.now()-t)/1000;
+    if(s<90)return 'الآن';
+    if(s<3600)return 'قبل '+Math.round(s/60)+' دقيقة';
+    if(s<86400)return 'قبل '+Math.round(s/3600)+' ساعة';
+    return 'قبل '+Math.round(s/86400)+' يوم'
+  }
+  function newsList(){
+    var h='';
+    if(NEWS.st==='load')h+='<div class="card" style="text-align:center;margin-bottom:10px"><div class="spin"></div><p class="mu">جارٍ جلب آخر الأخبار...</p></div>';
+    if(NEWS.st==='err')h+='<div class="card" style="margin-bottom:10px"><b>⚠️ تعذّر جلب الأخبار الآن</b><p class="mu">تأكد من الإنترنت ثم اضغط «تحديث».</p></div>';
+    if(NEWS.st==='stale')h+='<p class="mu">تعذّر التحديث الآن، هذه آخر أخبار محفوظة.</p>';
+    h+=NEWS.items.map(function(x){
+      return '<div class="nwc"><div class="nwt">'+esc(x.t)+'</div><div class="nwm">'+(x.s?'<span class="badge">'+esc(x.s)+'</span>':'')+(x.d?'<span class="mu">'+ago(x.d)+' · '+dt(x.d)+'</span>':'')+'</div></div>'
+    }).join('');
+    return h
+  }
+  function paintNews(){var b=document.getElementById('newsBox');if(b)b.innerHTML=newsList()}
+  function loadNews(force){
+    if(typeof fetch!=='function'||newsBusy)return;
+    if(!force){
+      if(NEWS.items.length&&Date.now()-NEWS.at<20*60*1000)return;
+      if(Date.now()-NEWS.last<60000)return;
+    }
+    newsBusy=true;NEWS.last=Date.now();NEWS.st='load';paintNews();
+    Promise.all(NQ.map(function(q){return getFeed(q).catch(function(){return null})})).then(function(rs){
+      var ok=rs.filter(Boolean);
+      if(!ok.length){NEWS.st=NEWS.items.length?'stale':'err';return}
+      var seen={},all=[];
+      ok.forEach(function(a){a.forEach(function(x){var k=nm(x.t).slice(0,60);if(!k||seen[k])return;seen[k]=1;all.push(x)})});
+      all.sort(function(a,b){return b.d-a.d});
+      NEWS.items=all.slice(0,25);NEWS.at=Date.now();NEWS.st='ok';
+      try{localStorage.setItem('mb2news',JSON.stringify({items:NEWS.items,at:NEWS.at}))}catch(e){}
+    }).catch(function(){NEWS.st=NEWS.items.length?'stale':'err'}).then(function(){newsBusy=false;paintNews()})
+  }
+  newsView=function(){
+    return '<div class="xhero"><h3>📰 أخبار وزارة التجارة والمواد الغذائية</h3><p class="mu">آخر الأخبار تظهر هنا مباشرة وتتحدّث تلقائياً.</p><button data-a="newsReload">🔄 تحديث الأخبار</button></div><div id="newsBox">'+newsList()+'</div>'
+  };
+
+  /* ============ 4) إعدادات المستفيد + مراسلة الوكيل ============ */
+  function uFrame(u,body,p){
+    return '<div class="wrap"><div class="top"><div class="tl">'+leaf(40)+'<div><h1>وكيل الغذاء</h1><small>'+esc(u.name)+' · الخدمات</small></div></div><div class="act">'+thBtn()+(p==='menu'?'<button data-a="backUser">رجوع</button>':'<button data-a="mePage" data-page="menu">رجوع</button>')+'<button data-a="out">خروج 🚪</button></div></div>'+body+'</div>'
+  }
+  function menuBody(){
+    return '<div class="xgrid">'+[['market','🛍️','سوق المواد والاستفسار'],['news','📰','أخبار التجارة والمواد الغذائية'],['ration','🪪','تطبيق البطاقة التموينية'],['set','⚙️','إعدادات حسابي'],['msg','✉️','مراسلة الوكيل']].map(function(x){
+      return '<button class="card svc" data-a="mePage" data-page="'+x[0]+'"><span>'+x[1]+'</span><b>'+x[2]+'</b></button>'
+    }).join('')+'</div>'
+  }
+  function setBody(u){
+    return '<div class="card" style="max-width:640px"><h3>⚙️ إعدادات حسابي</h3><div class="it"><span>🪪 رقم الأيدي</span><b>#'+u.id+'</b></div><label>الاسم (يُستخدم عند تسجيل الدخول)</label><input id="myName" value="'+esc(u.name)+'"><p class="mu">إذا غيّرت اسمك سجّل الدخول بعدها بالاسم الجديد مع نفس الكود.</p><button class="p" data-a="saveName" style="width:100%">💾 حفظ الاسم</button></div>'
+  }
+  function msgBody(u){
+    var mine=S.msgs.filter(function(m){return m.uid==u.id}).sort(function(a,b){return(b.at||0)-(a.at||0)});
+    return '<div class="card"><h3>✉️ مراسلة الوكيل</h3><textarea id="msgText" rows="4" maxlength="600" placeholder="اكتب رسالتك للوكيل...">'+esc(msgDraft)+'</textarea><button class="p" data-a="sendMsg" style="width:100%;margin-top:10px">📨 إرسال الرسالة</button></div>'+
+      '<div class="card" style="margin-top:12px"><h3>📜 رسائلي</h3>'+(mine.map(function(m){
+        return '<div class="mb"><div>'+esc(m.text).replace(/\n/g,'<br>')+'</div><small class="mu">'+dt(m.at)+(m.read?' · ✔ اطّلع عليها الوكيل':' · ⏳ لم تُقرأ بعد')+'</small>'+(m.reply?'<div class="rep">↩️ رد الوكيل: '+esc(m.reply)+'</div>':'')+'</div>'
+      }).join('')||'<p class="mu">لا توجد رسائل بعد.</p>')+'</div>'
+  }
+  var _vU3=vUser;
+  vUser=function(){
+    if(!me||me.r!=='u')return _vU3();
+    var u=byId(me.id),p=userExtraPage;
+    if(!u||!(p==='menu'||p==='news'||p==='set'||p==='msg'))return _vU3();
+    return uFrame(u,p==='menu'?menuBody():p==='news'?newsView():p==='set'?setBody(u):msgBody(u),p)
+  };
+
+  /* صفحة الرسائل عند الأدمن */
+  function msgsAdmin(){
+    var L=S.msgs.slice().sort(function(a,b){return(b.at||0)-(a.at||0)}),un=MC();
+    return '<div class="xhero"><h3>✉️ رسائل المستفيدين</h3><p class="mu">'+(un?un+' رسالة غير مقروءة':'لا توجد رسائل جديدة')+'</p>'+(un?'<button data-a="msgAllRead">✔ تحديد الكل كمقروء</button>':'')+'</div>'+
+      (L.map(function(m){
+        var u=byId(m.uid);
+        return '<div class="card msg'+(m.read?'':' un')+'" style="margin-bottom:10px"><div class="ch"><b>'+esc(u?u.name:m.name)+(u?' <span class="id">#'+u.id+'</span>':'')+'</b><span class="mu">'+dt(m.at)+'</span></div><p class="mt">'+esc(m.text).replace(/\n/g,'<br>')+'</p>'+(m.reply?'<div class="rep">↩️ ردّك: '+esc(m.reply)+'</div>':'')+
+          '<div class="chips" style="margin-top:8px"><button class="p" data-a="msgReply" data-id="'+esc(m.id)+'">💬 رد</button><button data-a="msgRead" data-id="'+esc(m.id)+'">'+(m.read?'إلغاء المقروء':'✔ مقروءة')+'</button>'+(u?waBtn(u,u.phone,'واتساب'):'')+'<button class="d" data-a="msgDel" data-id="'+esc(m.id)+'">حذف</button></div></div>'
+      }).join('')||'<div class="card"><p class="mu">لا توجد رسائل بعد.</p></div>')
+  }
+  var _vA3=vAdmin;
+  vAdmin=function(){return tab==='m'?xFrame('الرسائل',msgsAdmin()):_vA3()};
+  if(!NAV.some(function(n){return n[0]==='m'})){var qi=NAV.map(function(n){return n[0]}).indexOf('q');NAV.splice(qi+1,0,['m','✉️','الرسائل'])}
+  TT.m='الرسائل';
+
+  function paintBadges(){
+    if(!(me&&me.r==='a'))return;
+    var n=MC();
+    if(n)document.querySelectorAll('.side .nv[data-t=m]').forEach(function(b){if(!b.querySelector('.cnt'))b.insertAdjacentHTML('beforeend','<em class="cnt">'+n+'</em>')})
+  }
+  var _r3=render;
+  render=function(){_r3();paintBadges();if(document.getElementById('newsBox'))loadNews(false)};
+  var _ar3=applyRemote;
+  applyRemote=function(rd){var b=MC();_ar3(rd);if(me&&me.r==='a'&&MC()>b)toast('✉️ وصلتك رسالة جديدة من مستفيد')};
+
+  document.addEventListener('input',function(e){if(e.target&&e.target.id==='msgText')msgDraft=e.target.value});
+
+  document.addEventListener('click',function(ev){
+    var b=ev.target.closest('[data-a]');if(!b)return;
+    var a=b.dataset.a,id=b.dataset.id,isU=me&&me.r==='u',isA=me&&me.r==='a';
+    if(a==='newsReload'){loadNews(true);return}
+    if(a==='saveName'&&isU){
+      var u=byId(me.id);if(!u)return;
+      var n=g('myName').trim().replace(/\s+/g,' ');
+      if(n.length<3){alert('اكتب اسمك الكامل');return}
+      if(n.length>60){alert('الاسم طويل جداً');return}
+      var nn=nm(n).replace(/\s+/g,' ');
+      if(S.users.some(function(x){return x.id!=u.id&&nm(x.name).replace(/\s+/g,' ')===nn})){alert('هذا الاسم مستخدم من شخص آخر، اكتب اسماً مختلفاً');return}
+      if(n===u.name){toast('الاسم نفسه، ما تغيّر شي');return}
+      u.name=n;sv();toast('✅ تم حفظ الاسم');render();return
+    }
+    if(a==='sendMsg'&&isU){
+      var u2=byId(me.id);if(!u2)return;
+      var t=(g('msgText')||'').trim();
+      if(!t){alert('اكتب رسالتك أولاً');return}
+      if(t.length>600){alert('الرسالة طويلة، الحد الأقصى 600 حرف');return}
+      S.msgs.unshift({id:'m'+Date.now().toString(36)+Math.random().toString(36).slice(2,5),uid:u2.id,name:u2.name,text:t,at:Date.now(),read:false,reply:'',rat:0});
+      S.msgs=S.msgs.slice(0,300);msgDraft='';sv();toast('✅ وصلت رسالتك للوكيل');render();return
+    }
+    if(!isA)return;
+    var m=(S.msgs||[]).filter(function(x){return x.id==id})[0];
+    if(a==='msgAllRead'){S.msgs.forEach(function(x){x.read=true});sv();render()}
+    else if(a==='msgRead'&&m){m.read=!m.read;sv();render()}
+    else if(a==='msgReply'&&m){
+      var r=prompt('اكتب ردّك للمستفيد:',m.reply||'');
+      if(r===null)return;
+      m.reply=r.trim().slice(0,600);m.rat=Date.now();m.read=true;sv();render()
+    }
+    else if(a==='msgDel'&&m){if(confirm('حذف هذه الرسالة؟')){S.msgs=S.msgs.filter(function(x){return x.id!=id});sv();render()}}
+  });
+
+  render();
+})();
+    </script>
+  
+    <script>
+/* Supabase session and login controller */
+(function(){
+  var busy=false;
+  function fill(u,p){var a=document.getElementById('lu'),b=document.getElementById('lp');if(a)a.value=u;if(b)b.value=p;}
+  function hasData(d){return !!(d&&((d.users&&d.users.length)||(d.items&&d.items.length)||(d.deleg&&d.deleg.length)||(d.msgs&&d.msgs.length)));}
+  function fbInit(){
+    if(!window.FB)return;
+    if(!localStorage.getItem('foodAgentSession')){FBr=false;cloud='wait';cloudErr='';if(me){me=null;ses();}render();return;}
+    FBr=false;cloud='wait';
+    window.FB.sub(function(remote,pending){
+      if(pending)return;
+      var first=!FBr;FBr=true;cloud='ok';cloudErr='';var rd=fix(remote||{});
+      if(first){S=base?mAll(base,S,rd):rd;base=CL(rd);saveBase();try{localStorage.setItem(K,JSON.stringify(S));}catch(e){}render();if(unsynced())setTimeout(flush,80);}
+      else applyRemote(rd);
+      if(window.confirmPendingUserAdd)window.confirmPendingUserAdd(rd);
+    },function(e){cloud='err';cloudErr=(e&&e.message)||'تعذر الاتصال';if(e&&e.status===401){FBr=false;me=null;ses();render();}else render();});
+  }
+  window.fbInit=fbInit;window.addEventListener('fbready',fbInit);
+  document.addEventListener('click',function(ev){var b=ev.target.closest('[data-a=out]');if(b&&window.FB)window.FB.logout();},true);
+  doLogin=async function(){
+    if(busy)return;
+    var u=g('lu').trim(),p=g('lp').trim();lastU=u;err='';
+    if(!u||!p){err='اكتب الاسم والكود';render();fill(u,p);return;}
+    if(!window.FB||!window.FB.login){err='خدمة Supabase لم تجهز بعد، حدّث الصفحة';render();fill(u,p);return;}
+    busy=true;err='⏳ جارٍ التحقق من الحساب...';render();fill(u,p);var localBefore=CL(S);
+    try{
+      var result=await window.FB.login(u,p),remote=fix(result.data||{});
+      if(result.role==='admin'&&!hasData(remote)){
+        if(hasData(localBefore))remote=fix(await window.FB.tx(function(current){return hasData(current)?current:localBefore;}));
+        else if(window.FB.importLegacy){var legacy=await window.FB.importLegacy();if(hasData(legacy))remote=fix(await window.FB.tx(function(current){return hasData(current)?current:legacy;}));}
+      }
+      S=remote;base=CL(remote);saveBase();FBr=true;cloud='ok';cloudErr='';
+      if(result.role==='admin')me={r:'a'};
+      else{var person=byId(result.user_id);if(!person)throw new Error('لم يتم العثور على حساب المستفيد');me=mkReq(person);}
+      ses();busy=false;err='';render();fbInit();
+    }catch(e){busy=false;err=(e&&e.message==='invalid_credentials')?'الاسم أو الكود غير صحيح':(e&&e.status===401?'الاسم أو الكود غير صحيح':'تعذّر تسجيل الدخول إلى Supabase: '+((e&&e.message)||'تحقق من الإنترنت'));render();fill(u,p);}
+  };
+})();
+</script>
+</body>
+</html>
